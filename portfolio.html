@@ -1,0 +1,207 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- jquery -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <!-- unicode -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- viewport -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Font awesome -->
+
+    <style>
+        /*.light-green  #E3F6D5;}
+        .dark-green  #699D43;}
+        .purple  #691084;}
+        .gold-background  #A97628;}
+        .dark purple-background  #2A1730;}
+        .silver-background: #D9D9d9 */
+        
+        .header {
+            background-color: #A97628;
+            color: #2A1730;
+            margin: 0% 20% 2%;
+            padding: 2% 4%;
+            border-radius: 15px;
+            text-align: center;
+            line-height: 1.8;
+        }
+        
+        .footer {
+            background-color: #A97628;
+            color: #2A1730;
+            margin: 0% 20%;
+            padding: 1% 1%;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 1.8;
+        }
+        
+        .background {
+            background-color: #699D43;
+            padding: 0.5% 10% 0.5%;
+        }
+        
+        .silver-box {
+            background-color: #D9D9d9;
+            color: #691084;
+            margin: 0% 3% 3%;
+            padding: 5%;
+            border-radius: 15px;
+            text-align: center;
+            line-height: 2;
+        }
+        
+        .purple-box {
+            background-color: #691084;
+            color: #D9D9D9;
+            margin: 0% 3% 2%;
+            padding: 5%;
+            border-radius: 15px;
+            text-align: center;
+            line-height: 2;
+        }
+        
+        .picture-box {
+            background-color: rgb(201, 135, 223);
+            margin: 2% 4%;
+            padding: 2%;
+            border-radius: 7px;
+            line-height: 2;
+        }
+        
+        .green-box {
+            background-color: #E3F6D5;
+            margin: 1%;
+            padding: 3%;
+            border-radius: 10px;
+        }
+        
+        .img {
+            width: 75%;
+            border-radius: 5px;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            font-family: Trebuche MS;
+            text-align: center;
+        }
+        /* major headings */
+        
+        h4,
+        h5,
+        h6 {
+            font-family: Brandon Grotesque;
+            text-align: left;
+        }
+        /* minor headings */
+        
+        p {
+            font-family: Merriweather;
+            text-align: left;
+        }
+        /* regular ol' text*/
+    </style>
+
+</head>
+
+<div class="background fluid-container">
+
+
+
+    <!-- Header; make it sticky (yellow)
+  About, Portfolio, Contact (these need to be buttons that link to each individual section) -->
+    <div class="header fluid-container sticky-top">
+        <div class="btn-group" role="group">
+            <a href "#about"><button type="button" class="btn btn-secondary"> About </button></a>
+            <a href="#portfolio"><button type="button" class="btn btn-secondary"> Portfolio </button></a>
+            <a href="#contact"><button type="button" class="btn btn-secondary"> Contact </button></a>
+        </div>
+    </div>
+    <!-- END header -->
+
+
+    <!-- About (aqua)-->
+    <div class="silver-box fluid-container row">
+        <div class="green-box col-md-6">
+            <h1 id="about"> About</h1>
+            <p> Jillian is a person. She can walk, cook and do other things most people would consider relatively normal. She is a musician, cinephile, angolophile and love of rainy days spent inside with tea, backgammon and good company. She is a resoursceful
+                creative who considers the day wasted if nothing was learned, solved, accomplished or enjoyed. To her, the oxford comma is bad style. She has two degrees: an AAS in Electronics and a BS in Speech Pathology -- in spite of this, she is a
+                self-described auto didact. Lately, she has been mucking about with HTML, CSS and Javascript and is familiar with things like jQuery and bootstrap.</p>
+        </div>
+        <!--END paragraph/green box -->
+        <div class="col-md-6">
+            <img class="img" src="https://drive.google.com/open?id=1XyDI7lVVLt6X_ykbKlchHQyn-ksfFGtE" alt="profile-pic">
+        </div>
+        <!--END pic -->
+    </div>
+    <!-- END about -->
+
+
+
+    <!-- Portfolio -- 3 projects per line -->
+    <div class="purple-box fluid-container">
+        <h1 id="portfolio"> Portfolio </h1>
+
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="col-md-5 col-lg-5 picture-box">
+                <a href="https://codepen.io/jvholb/full/POVRvZ"><img class="img" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1443013.POVRvZ.small.830e9e68-a575-407c-8679-69031510c69e.png" alt="Mortgage Calculator"></a>
+                <h3>Mortgage Calculator</h3>
+            </div>
+            <!-- END Mortgage Calculator -->
+            <div class="col-md-2 col-lg-2"></div>
+            <!--Padding-->
+            <div class="col-md-5 col-lg-5 picture-box">
+                <a href="https://codepen.io/jvholb/full/NwoMWp"><img class="img" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1443013.NwoMWp.small.c17453fb-7179-475b-89c5-9a490350834f.png" alt="Diagnostic Tool"></a>
+                <h3>Diagnostic Tool</h3>
+            </div>
+            <!-- END Diagnostic Tool -->
+        </div>
+        <!-- END Row 1 -->
+
+        <!-- Row 2 -->
+        <div class="row">
+            <div class="col-md-5 col-lg-5 picture-box">
+                <a href="https://codepen.io/jvholb/full/mMGGRg/"><img class="img" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1443013.mMGGRg.small.89b577ca-800d-4fb0-a6df-4983710a0217.png" alt="Tribute Page"></a>
+                <h3>Tribute Page</h3>
+            </div>
+            <!-- END Tribute Page -->
+            <div class="col-md-2 col-lg-2"></div>
+            <!--Padding-->
+        </div>
+        <!-- END row 2 -->
+
+
+    </div>
+    <!-- END portfoloio -->
+
+    <!--Footer/Contact (yellow/gold)-->
+    <div class="fluid-container footer">
+        <h3 id="contact">Contact</h3>
+        <div class="row col"><i class="fa fa-envelope" aria-hidden="true"> jvholb@gmail.com</i></div>
+        <div class="row col">
+            <a href="https://www.linkedin.com/in/jillian-holbert-328aa0119/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+
+    </div>
+    <!-- END footer -->
+
+
+</div>
+<!-- END background, LAST LINE -->
+
+
+</html>
+
+
+
+<script>
+    $(document).ready(function() {
+
+    }); /*END jquery */
+</script>
