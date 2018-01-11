@@ -1,0 +1,807 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- jquery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- bootstrap -->
+    <meta charset="UTF-8">
+    <!-- unicode -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- sweetalert -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- viewport -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Font awesome -->
+</head>
+<!-- background -->
+<div class="background fluid-container">
+    <div class="game-box">
+        <!--Game box -->
+
+        <div class="header">
+            <h1>Hangman</h1>
+            <h3 style="text-align:center">Cine Edition</h3>
+        </div>
+        <!-- END header -->
+        <div id="letter-box">
+            <!-- top box -->
+            <ul class="list-inline">
+                <button id="q" class="letter"></button>
+                <button id="w" class="letter"></button>
+                <button id="e" class="letter"></button>
+                <button id="r" class="letter"></button>
+                <button id="t" class="letter"></button>
+                <button id="y" class="letter"></button>
+
+                <button id="u" class="letter"></button>
+                <button id="i" class="letter"></button>
+                <button id="o" class="letter"></button>
+                <button id="p" class="letter"></button>
+            </ul>
+
+            <ul class="list-inline">
+                <button id="a" class="letter"></button>
+                <button id="s" class="letter"></button>
+                <button id="d" class="letter"></button>
+                <button id="f" class="letter"></button>
+
+                <button id="g" class="letter"></button>
+                <button id="h" class="letter"></button>
+
+                <button id="j" class="letter"></button>
+                <button id="k" class="letter"></button>
+                <button id="l" class="letter"></button>
+            </ul>
+
+            <ul class="list-inline">
+                <button id="z" class="letter"></button>
+                <button id="x" class="letter"></button>
+                <button id="c" class="letter"></button>
+                <button id="v" class="letter"></button>
+
+                <button id="b" class="letter"></button>
+                <button id="n" class="letter"></button>
+                <button id="m" class="letter"></button>
+            </ul>
+            <h3 id="hint" style="text-align:center">Hint: </h3>
+            <ul class="list-inline">
+                <button id="reset" class="btn btn-primary">Reset</button>
+                <button id="hint-btn" class="btn btn-primary">Hint</button>
+            </ul>
+        </div>
+        <!-- END top box -->
+
+        <div id="hang" class="box">
+            <!--bottom box -->
+            <h3 id="solution" style="text-align: center">Solution: </h3>
+            <div class="hang-box"><svg height="250" width="175">
+               <!--hang box -->     
+                    <circle id="head" cx="25" cy="50" r="23.5"/>      
+                    <line id="torso" x1="25" y1="75" x2="25" y2="135"/>              
+                   
+                    <line id="left-arm" x1="25" y1="85" x2="0" y2="115"/>
+                    <line id="right-arm" x1="25" y1="85" x2="50" y2="115"/>      
+                    
+                    <line id="left-leg" x1="25" y1="135" x2="0" y2="175"/>
+                    <line id="right-leg" x1="25" y1="135" x2="50" y2="175"/>
+                    
+                    <line id="eye1" x1="12" y1="45" x2="20" y2="38"/>
+                    <line id="eye2" x1="20" y1="45" x2="12" y2="38"/>
+                    <line id="eye3" x1="30" y1="45" x2="38" y2="38"/>
+                    <line id="eye4" x1="38" y1="45" x2="30" y2="38"/>
+                    <line id="mouth" x1="16" y1="60" x2="34" y2="60"/>
+                    
+                    <line id="rope1" x1="25" y1="25" x2="25" y2="0"/>
+                    <line id="rope2" x1="25" y1="2" x2="95" y2="2"/>
+                    <line id="rope3" x1="95" y1="2" x2="95" y2="225"/>
+                    <line id="rope3" x1="35" y1="225" x2="155" y2="225"/>
+                    
+                  </svg></div>
+            <!--END hang box -->
+        </div>
+        <!--END bottom box -->
+    </div>
+    <!--END game box -->
+</div>
+<!--END background -->
+
+</html>
+
+<style>
+    /* .light-blue #e0e2e4
+    .light-brown #c6bcb6
+    .brown: #96897f
+    .dark-brown #625750
+    */
+    
+    .header {
+        margin: 0% 0% 2%;
+        color: #625750;
+    }
+    
+    .pop-up {
+        color: #c6bcb6;
+        background-color: #e0e2e4;
+        border-color: #625750;
+        border-radius: 15px;
+    }
+    
+    .pop-up-btn {
+        background-color: #c6bcb6;
+        color: #96897f;
+        padding: 2% 20%;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 1.8;
+        align-self: center;
+    }
+    
+    .background {
+        background-color: #e0e2e4;
+        padding: 0.5% 10% 0.5%;
+    }
+    
+    .game-box {
+        background-color: #c6bcb6;
+        color: #625750;
+        margin: 0% 3% 3%;
+        padding: 1% 3.5% 3.5%;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 2;
+    }
+    
+    .hang-box {
+        background-color: #96897f;
+        color: #625750;
+        margin: 0% 20% 3%;
+        padding: 4% 24% 0%;
+        border-radius: 15px;
+        line-height: 2;
+    }
+    
+    #letter-box {
+        background-color: #96897f;
+        color: #625750;
+        margin: 0% 10% 2%;
+        padding: 2% 3% 1%;
+        border-radius: 15px;
+        line-height: 2;
+    }
+    
+    #hint-btn,
+    #reset {
+        background-color: #96897f;
+        border-color: #625750;
+        color: #625750;
+        border-radius: 5px;
+        border-width: 50%;
+        font-size: 120%;
+        font-family: Brandon Grotesque;
+        padding: 0.5% 1.5%;
+        margin: 1% 1.5% 0%;
+    }
+    
+    .box {
+        background-color: #96897f;
+        color: #625750;
+        padding: 2% 5% 1%;
+        margin: 0.5% 3% 0%;
+        border-radius: 15px;
+        line-height: 2;
+    }
+    
+    .letter {
+        background-color: #625750;
+        color: #c6bcb6;
+        margin: 1% 0.5% 0%;
+        padding: 0% 1%;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 2.5;
+        width: 7%;
+        border-color: #c6bcb6;
+        border-style: solid;
+        border-width: 1.5px;
+    }
+    
+    .letter:hover,
+    .letter:off {
+        background-color: #c6bcb6;
+        color: #625750;
+        border-color: #96897f;
+    }
+    
+    #right-arm,
+    #left-arm,
+    #left-leg,
+    #right-leg,
+    #torso,
+    #eye1,
+    #eye2,
+    #eye3,
+    #eye4,
+    #mouth,
+    #head,
+    #rope1,
+    #rope2,
+    #rope3,
+    #rope4 {
+        stroke: #49759e;
+        stroke-width: 3;
+        fill: none;
+    }
+    
+    h1,
+    h2 {
+        font-family: Trebuche MS;
+        text-align: center;
+    }
+    /* major headings */
+    
+    h3 {
+        font-family: Brandon Grotesque;
+        text-align: left;
+    }
+    
+    h4,
+    h5,
+    h6 {
+        font-family: Brandon Grotesque;
+        text-align: left;
+    }
+    /* minor headings */
+    
+    p {
+        font-family: Merriweather;
+        text-align: left;
+    }
+    /* regular ol' text*/
+</style>
+
+<script>
+    $(document).ready(function() {
+        /*Variables*/
+        var currentWordB = [];
+        var letter;
+        var mn = 0;
+        var word;
+        var guesses = [];
+        var misses = [];
+        var solution = [];
+        var kl = 0;
+        var zt = 0;
+        var ij = 0;
+        var currentWord = "";
+        var letters = [
+            (q = $("#q").text("Q")),
+            (w = $("#w").text("W")),
+            (e = $("#e").text("E")),
+            (r = $("#r").text("R")),
+            (t = $("#t").text("T")),
+            (y = $("#y").text("Y")),
+
+            (u = $("#u").text("U")),
+            (i = $("#i").text("I")),
+            (o = $("#o").text("O")),
+            (p = $("#p").text("P")),
+
+            (a = $("#a").text("A")),
+            (s = $("#s").text("S")),
+            (d = $("#d").text("D")),
+            (f = $("#f").text("F")),
+
+            (g = $("#g").text("G")),
+            (h = $("#h").text("H")),
+
+            (j = $("#j").text("J")),
+            (k = $("#k").text("K")),
+            (l = $("#l").text("L")),
+
+            (z = $("#z").text("Z")),
+            (x = $("#x").text("X")),
+            (c = $("#c").text("C")),
+            (v = $("#v").text("V")),
+
+            (b = $("#b").text("B")),
+            (n = $("#n").text("N")),
+            (m = $("#m").text("M"))
+        ];
+
+        var wordBank = [{
+            solution: "Werner Herzog",
+            hint: "German existentialist filmaker/documentarian"
+        }, {
+            solution: "Naked",
+            hint: "Mike Leigh film"
+        }, {
+            solution: "Amy Jump",
+            hint: "screenwriter for A Field in England"
+        }, {
+            solution: "Peeping Tom",
+            hint: "a man, a camera and a killing spree"
+        }, {
+            solution: "Paul Thomas Anderson",
+            hint: "Jonny Greenwood scores his films"
+        }, {
+            solution: "Gus Van Sant",
+            hint: "remade Psycho"
+        }, {
+            solution: "David Cronenberg",
+            hint: "Canadian director, remade the Fly"
+        }, {
+            solution: "Lynne Ramsay",
+            hint: "dropped out of filming Jane Got a Gun"
+        }, {
+            solution: "Doug Jones",
+            hint: "frequently collaborates with Guillermo Del Toro"
+        }, {
+            solution: "Emma Thompson",
+            hint: "portrayed P.L. Travers and adapted Sense and Sensibility"
+        }, {
+            solution: "Frances McDormand",
+            hint: "actress, frequent collaborator of the Coens"
+        }, {
+            solution: "Richard Ayoade",
+            hint: "second feature was a Dostoyevsky adaption"
+        }, {
+            solution: "Stephen Chbosky",
+            hint: "first feature was an adaption of his own novel"
+        }, {
+            solution: "Aaron Sorkin",
+            hint: "writer known for witty, quick-fire dialogue"
+        }, {
+            solution: "Michel Gondry",
+            hint: "French director with playful visual style & use of mise en scene"
+        }, {
+            solution: "Michael Fassbender",
+            hint: "frequent collaborator of director Steve McQueen"
+        }, {
+            solution: "Ava DuVernay",
+            hint: "director of Selma"
+        }, {
+            solution: "Taika Waititi",
+            hint: "Kiwi director associated with Flight of the Concords"
+        }, {
+            solution: "Pam Grier",
+            hint: "star of Jackie Brown"
+        }, {
+            solution: "Alfonso Cuaron",
+            hint: "Mexican director who frequently alternates between making Hollywood and Mexican films"
+        }, {
+            solution: "Tilda Swinton",
+            hint: "androgynous character actress"
+        }, {
+            solution: "Wally Pfister",
+            hint: "cinematographer known for working with Chris Nolan"
+        }, {
+            solution: "Robert Rodriguez",
+            hint: "directs both children's films and B-movies"
+        }, {
+            solution: "Green Room",
+            hint: "film featuring Anton Yelchin & Imogen Poots"
+        }, {
+            solution: "Macon Blair",
+            hint: "director & actor, best known for his role in Blue Ruin"
+        }, {
+            solution: "Little Murders",
+            hint: "film starring Donald Sutherland and Elliott Gould"
+        }, {
+            solution: "The Long Goodbye",
+            hint: "Altman adapts Chandler"
+        }, {
+            solution: "Danny Elfman",
+            hint: "composer/frequent collaborator of Tim Burton"
+        }, {
+            solution: "Jon Brion",
+            hint: "frequent film composer & record producer"
+        }, {
+            solution: "Danny Boyle",
+            hint: "film director who did the opening ceremony for the London Olympics"
+        }, {
+            solution: "Patty Jenkins",
+            hint: "made a film about Aileen Wuornos"
+        }, {
+            solution: "My Neighbor Totoro",
+            hint: "features the voices of the Fanning sisters"
+        }, {
+            solution: "Joe Hisaishi",
+            hint: "primary composer for Ghibli"
+        }, {
+            solution: "LAIKA",
+            hint: "stop-motion company based in Portland"
+        }, {
+            solution: "Nicole Kidman",
+            hint: "actress, has worded with everyone from Lars von Trier to John Cameron Mitchell to Yorgos Lanthimos"
+        }];
+
+        /*END variables*/
+
+        /* Functions */
+        function initialize() {
+            $("#head").hide();
+            $("#torso").hide();
+
+            $("#left-arm").hide();
+            $("#right-arm").hide();
+            $("#left-leg").hide();
+            $("#right-leg").hide();
+
+            $("#eye1").hide();
+            $("#eye2").hide();
+            $("#eye3").hide();
+            $("#eye4").hide();
+            $("#mouth").hide();
+
+            $("#hint").hide();
+            $("#hint-btn").show();
+
+            on(a);
+            on(b);
+
+            on(c);
+            on(d);
+            on(e);
+            on(f);
+            on(g);
+            on(h);
+
+            on(i);
+            on(j);
+            on(k);
+            on(l);
+            on(m);
+            on(n);
+
+            on(o);
+            on(p);
+            on(q);
+            on(r);
+            on(s);
+            on(t);
+
+            on(u);
+            on(v);
+            on(w);
+            on(x);
+            on(y);
+            on(z);
+
+            guesses.length = 0;
+            solution.length = 0;
+            misses.length = 0;
+
+            currentWordB.length = 0;
+            letter;
+            mn = 0;
+
+            zt = 0;
+            ij = 0;
+            kl = 0;
+
+
+            currentWord = "";
+            click();
+            pickWord();
+
+
+
+        }
+        /*END initialize */
+
+        function startBtn() {
+            swal({
+                title: "Hangman",
+                text: "Cine Edition",
+                classname: "pop-up",
+                closeOnClickOutside: true,
+                button: {
+                    text: "Start",
+                    visible: true,
+                    className: "pop-up-btn",
+                    value: true
+                }
+            });
+        } /*END function startBtn */
+
+        function pickWord() {
+            zt = Math.floor(Math.random() * wordBank.length);
+            $("#word").text("Word: " + wordBank[zt].solution);
+            $("#hint").text("Hint: " + wordBank[zt].hint);
+            currentWord = wordBank[zt].solution.toUpperCase();
+            blanks();
+        }
+
+        function off(asdf) {
+            asdf.off("click").css({
+                "background-color": "#e0e2e4",
+                color: "#96897f"
+            });
+        } /*END function off */
+
+        function on(asdf) {
+            asdf.on().css({
+                "background-color": "#625750",
+                "color": "#c6bcb6"
+            })
+        }
+
+        function count() {
+            if (misses.length > 6) {
+                $("#hint-btn").hide();
+                $("#solution").text("Solution: " + currentWord);
+                $("#hint").show();
+                $("#hint").text("Hint: " + wordBank[zt].hint);
+                swal({
+                    title: "You Lose!",
+                    text: "Get back on that couch and watch more movies!!!",
+                    className: "pop-up",
+                    closeOnClickOutside: false,
+                    button: {
+                        text: "Replay",
+                        visible: true,
+                        className: "pop-up-btn",
+                        value: true
+                    }
+                }).then(replay => {
+                    location.reload(true);
+
+                });
+            }
+        } /*END function count */
+
+        function wrong() {
+            if (misses.length == 1) {
+                $("#head").show();
+                count();
+            } else if (misses.length == 2) {
+                $("#torso").show();
+                count();
+            } else if (misses.length == 3) {
+                $("#left-arm").show();
+                count();
+            } else if (misses.length == 4) {
+                $("#right-arm").show();
+                count();
+            } else if (misses.length == 5) {
+                $("#left-leg").show();
+                count();
+            } else if (misses.length == 6) {
+                $("#right-leg").show();
+                count();
+            } else if (misses.length == 7) {
+                $("#eye1").show();
+                $("#eye2").show();
+                $("#eye3").show();
+                $("#eye4").show();
+                $("#mouth").show();
+                count();
+            }
+        } /*END function wrong */
+
+        function blanks() {
+            for (kl = 0; kl < currentWord.length; kl++) {
+                if (currentWord[kl].includes(" ") == true) {
+                    solution.push("//");
+                } else {
+                    solution.push("__");
+                }
+            }
+            $("#solution").text("Solution: " + solution.join(" "));
+        } /*END function blanks*/
+
+        function right() {
+            /*var currentWordB = [];*/
+            currentWordB = currentWord.split("");
+            /*var*/
+            letter = guesses[ij - 1];
+            /*var*/
+            mn = 0;
+
+            function win() {
+                if (solution.includes("__") == false) {
+                    swal({
+                        title: "You Win!",
+                        text: "Congratuwelldone!!!",
+                        className: "pop-up",
+                        closeOnClickOutside: true,
+                        button: {
+                            text: "Replay",
+                            visible: true,
+                            className: "pop-up-btn",
+                            value: true
+                        }
+                    }).then(replay => {
+                        location.reload(true);
+
+
+
+                    });
+                }
+            } /*END function win */
+
+            for (mn = 0; mn < currentWordB.length; mn++) {
+                if (currentWordB[mn].includes(letter) == true) {
+                    solution.splice(mn, 1, letter);
+                }
+            }
+
+            $("#solution").text("Solution: " + solution.join(" "));
+            win();
+        } /*END function right */
+
+        function rightWrong() {
+            ij++;
+            console.log(guesses, solution, misses, currentWordB, letter);
+            if (currentWord.includes(guesses[ij - 1]) == true) {
+                right();
+                count();
+            } else {
+                misses.push(guesses[ij - 1]);
+                wrong();
+            }
+        } /*END function rightWrong*/
+
+        function click() {
+            q.click(function() {
+                guesses.push("Q");
+                off(q);
+                rightWrong();
+            });
+
+            w.click(function() {
+                guesses.push("W");
+                off(w);
+                rightWrong();
+            });
+
+            e.click(function() {
+                guesses.push("E");
+                off(e);
+                rightWrong();
+            });
+
+            r.click(function() {
+                guesses.push("R");
+                off(r);
+                rightWrong();
+            });
+
+            t.click(function() {
+                guesses.push("T");
+                off(t);
+                rightWrong();
+            });
+
+            y.click(function() {
+                guesses.push("Y");
+                off(y);
+                rightWrong();
+            });
+
+            u.click(function() {
+                guesses.push("U");
+                off(u);
+                rightWrong();
+            });
+            i.click(function() {
+                guesses.push("I");
+                off(i);
+                rightWrong();
+            });
+            o.click(function() {
+                guesses.push("O");
+                off(o);
+                rightWrong();
+            });
+            p.click(function() {
+                guesses.push("P");
+                off(p);
+                rightWrong();
+            });
+
+            a.click(function() {
+                guesses.push("A");
+                off(a);
+                rightWrong();
+            });
+            s.click(function() {
+                guesses.push("S");
+                off(s);
+                rightWrong();
+            });
+            d.click(function() {
+                guesses.push("D");
+                off(d);
+                rightWrong();
+            });
+            f.click(function() {
+                guesses.push("F");
+                off(f);
+                rightWrong();
+            });
+
+            g.click(function() {
+                guesses.push("G");
+                off(g);
+                rightWrong();
+            });
+            h.click(function() {
+                guesses.push("H");
+                off(h);
+                rightWrong();
+            });
+
+            j.click(function() {
+                guesses.push("J");
+                off(j);
+                rightWrong();
+            });
+            k.click(function() {
+                guesses.push("K");
+                off(k);
+                rightWrong();
+            });
+            l.click(function() {
+                guesses.push("L");
+                off(l);
+                rightWrong();
+            });
+
+            z.click(function() {
+                guesses.push("Z");
+                off(z);
+                rightWrong();
+            });
+            x.click(function() {
+                guesses.push("X");
+                off(x);
+                rightWrong();
+            });
+            c.click(function() {
+                guesses.push("C");
+                off(c);
+                rightWrong();
+            });
+            v.click(function() {
+                guesses.push("V");
+                off(v);
+                rightWrong();
+            });
+
+            b.click(function() {
+                guesses.push("B");
+                off(b);
+                rightWrong();
+            });
+            n.click(function() {
+                guesses.push("N");
+                off(n);
+                rightWrong();
+            });
+            m.click(function() {
+                guesses.push("M");
+                off(m);
+                rightWrong();
+            });
+        } /*END function click */
+        /* END functions */
+        startBtn();
+        initialize();
+
+
+        /*Hint button */
+        $("#hint-btn").click(function() {
+            misses.push("hint");
+            wrong();
+            $("#hint-btn").hide();
+            $("#hint").show();
+        });
+
+        /*Reset button */
+        $("#reset").click(function() {
+            location.reload(true);
+        });
+    }); /*END jquery */
+</script>
