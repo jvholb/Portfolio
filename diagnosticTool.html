@@ -1,0 +1,3108 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- jquery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- bootstrap -->
+    <meta charset="UTF-8">
+    <!-- unicode -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- viewport -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- sweetalert -->
+</head>
+<div class="fluid-container background">
+    <!--Header -->
+    <div class="fluid-container heading">
+        <h1> Diagnostic Tool </h1>
+    </div>
+    <!--End Header -->
+
+
+    <div class="light-box fluid-container" id="section1">
+        <!-- Begin section 1 -->
+        <form class="form" action="">
+            <div class="row">
+
+                <div class="form-group col-md-6">
+                    <label for="student-name"> Student Name: </label>
+                    <input class="form-control" id="student-first-name" placeholder="First Name">
+                    <label for="date1"> Date: </label>
+                    <input class="form-control" id="date1" type="date">
+                </div>
+                <!-- END student-name form-group -->
+
+
+
+                <div class="form-group col-md-6">
+                    <label for="respondent-name"> Respondent Name: </label>
+                    <input class="form-control" id="respondent-name">
+                    <label for="relationship-to-student"> Relationship: </label>
+                    <input class="form-control" id="relationship-to-student">
+                </div>
+                <!-- END respondent-name form-group -->
+
+
+        </form>
+        <!-- END form -->
+
+
+
+        </div>
+        <!--END row -->
+        <button id="next1" class="btn btn-primary"> Next </button>
+        <h4> 1/7 </h4>
+    </div>
+    <!-- END section 1-->
+
+
+
+    <!-- Section 2 - RESTRICTED/REPETITIVE BEHAVIORS-->
+    <div class="light-box fluid-container" style="display:none" id="section2">
+
+
+        <h2> Restricted/Repetitive Behaviors </h2>
+        <h4> Please indicate on a scale of 0 to 3 how much like the individual the behavior is. </h4>
+
+        <h5 id="yeah2"> </h5>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <!-- Number -->
+                    <th>
+                        <h2>Behavior</h2>
+                    </th>
+                    <th> 0: not at all like </th>
+                    <th> 1: not much like </th>
+                    <th> 2: somewhat like </th>
+                    <th> 3: very much like </th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <tr>
+                    <th id="num1">1</th>
+                    <th id="1">if left alone, the majority of the individuals time will be spent in repetitive or stereotyped Behaviors</th>
+                    <th> <input type="radio" name="1" value="0" id="1-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="1" value="1" id="1-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="1" value="2" id="1-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="1" value="3" id="1-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th id="num2">2</th>
+                    <th id="2">is preoccupied with specific stimuli that are abnormal in intensity </th>
+                    <th> <input type="radio" name="2" value="0" id="2-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="2" value="1" id="2-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="2" value="2" id="2-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="2" value="3" id="2-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num3">3</th>
+                    <th id="3">stares at hands, objects or items in the environment for least 5 seconds</th>
+                    <th> <input type="radio" name="3" value="0" id="3-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="3" value="1" id="3-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="3" value="2" id="3-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="3" value="3" id="3-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+
+
+                <tr>
+                    <th id="num4">4</th>
+                    <th id="4">flicks fingers rapidly in front of eyes for periods of five seconds or more</th>
+                    <th> <input type="radio" name="4" value="0" id="4-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="4" value="1" id="4-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="4" value="2" id="4-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="4" value="3" id="4-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+                <tr>
+                    <th id="num5">5</th>
+                    <th id="5">makes rapid lunging, darting movements when moving from place to place</th>
+                    <th> <input type="radio" name="5" value="0" id="5-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="5" value="1" id="5-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="5" value="2" id="5-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="5" value="3" id="5-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+
+                <tr>
+                    <th id="num6">6</th>
+                    <th id="6">flaps hands or fingers in front of face or at sides</th>
+                    <th> <input type="radio" name="6" value="0" id="6-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="6" value="1" id="6-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="6" value="2" id="6-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="6" value="3" id="6-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th id="num7">7</th>
+                    <th id="7">makes high pitch sounds or other vocalizations for self-stimulation</th>
+                    <th> <input type="radio" name="7" value="0" id="7-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="7" value="1" id="7-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="7" value="2" id="7-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="7" value="3" id="7-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th id="num8">8</th>
+                    <th id="8">uses toys or objects inappropriately</th>
+                    <th> <input type="radio" name="8" value="0" id="8-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="8" value="1" id="8-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="8" value="2" id="8-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="8" value="3" id="8-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th id="num9">9</th>
+                    <th id="9">does certain things repetitively, ritualistically</th>
+                    <th> <input type="radio" name="9" value="0" id="9-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="9" value="1" id="9-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="9" value="2" id="9-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="9" value="3" id="9-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+
+                <tr>
+                    <th id="num10">10</th>
+                    <th id="10">engages in stereotyped behaviors when playing with toys or objects</th>
+                    <th> <input type="radio" name="10" value="0" id="10-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="10" value="1" id="10-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="10" value="2" id="10-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="10" value="3" id="10-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+
+                <tr>
+                    <th id="num11">11</th>
+                    <th id="11">repeats unintelligible sounds (babbles) over and over</th>
+                    <th> <input type="radio" name="11" value="0" id="11-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="11" value="1" id="11-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="11" value="2" id="11-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="11" value="3" id="11-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+                <tr>
+                    <th id="num12">12</th>
+                    <th id="12">shows unusual interest in sensory aspects of play materials, body parts, or objects</th>
+                    <th> <input type="radio" name="12" value="0" id="12-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="12" value="1" id="12-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="12" value="2" id="12-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="12" value="3" id="12-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th id="num13">13</th>
+                    <th id="13">displays ritualistic or compulsive behaviors</th>
+                    <th> <input type="radio" name="13" value="0" id="13-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="13" value="1" id="13-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="13" value="2" id="13-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="13" value="3" id="13-3"> 3 </br>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <!-- END table -->
+        <button id="next2" class="btn btn-primary"> Next </button>
+        <h4> 2/7 </h4>
+
+    </div>
+    <!-- END section 2 -->
+
+
+
+    <!-- Section 3 - Social Interaction-->
+    <div class="light-box fluid-container" style="display:none" id="section3">
+
+
+        <h2> Social Interaction </h2>
+        <h4> Please indicate on a scale of 0 to 3 how much like the individual the behavior is. </h4>
+        <h5 id="yeah3"></h5>
+        <table class="table  table-bordered">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <!-- Number -->
+                    <th>
+                        <h2>Behavior</h2>
+                    </th>
+                    <th> 0: not at all like </th>
+                    <th> 1: not much like </th>
+                    <th> 2: somewhat like </th>
+                    <th> 3: very much like </th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <tr>
+                    <th id="num14">14</th>
+                    <th id="14">does not initiate conversation with peers or others</th>
+                    <th> <input type="radio" name="14" value="0" id="14-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="14" value="1" id="14-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="14" value="2" id="14-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="14" value="3" id="14-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th id="num15">15</th>
+                    <th id="15">pays little or no attention to what peers are doing</th>
+                    <th> <input type="radio" name="15" value="0" id="15-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="15" value="1" id="15-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="15" value="2" id="15-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="15" value="3" id="15-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+
+
+
+
+                <tr>
+                    <th id="num16">16</th>
+                    <th id="16">fails to imitate other people in games or learning activities</th>
+                    <th> <input type="radio" name="16" value="0" id="16-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="16" value="1" id="16-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="16" value="2" id="16-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="16" value="3" id="16-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+
+
+                <tr>
+                    <th id="num17">17</th>
+                    <th id="17">shows little or no interest in other people</th>
+                    <th> <input type="radio" name="17" value="0" id="-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="17" value="1" id="-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="17" value="2" id="-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="17" value="3" id="-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+                <tr>
+                    <th id="num18">18</th>
+                    <th id="18">doesn't follow other’s gestures to look at something</th>
+                    <th> <input type="radio" name="18" value="0" id="18-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="18" value="1" id="18-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="18" value="2" id="18-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="18" value="3" id="18-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+
+                <tr>
+                    <th id="num19">19</th>
+                    <th id="19">seems indifferent to others person's attention</th>
+                    <th> <input type="radio" name="19" value="0" id="19-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="19" value="1" id="19-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="19" value="2" id="19-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="19" value="3" id="19-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th id="num20">20</th>
+                    <th id="20">shows minimal expressed pleasure when interacting with others</th>
+                    <th> <input type="radio" name="20" value="0" id="20-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="20" value="1" id="20-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="20" value="2" id="20-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="20" value="3" id="20-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th id="num21">21</th>
+                    <th id="21">displays a little or no excitement in showing toys and objects to others</th>
+                    <th> <input type="radio" name="21" value="0" id="21-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="21" value="1" id="21-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="21" value="2" id="21-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="21" value="3" id="21-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th id="num22">22</th>
+                    <th id="22">seems uninterested in pointing out things in the environment to others</th>
+                    <th> <input type="radio" name="22" value="0" id="22-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="22" value="1" id="22-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="22" value="2" id="22-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="22" value="3" id="22-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+
+                <tr>
+                    <th id="num23">23</th>
+                    <th id="23">seems unwilling or reluctant to get others to interact with him or her</th>
+                    <th> <input type="radio" name="23" value="0" id="23-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="23" value="1" id="23-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="23" value="2" id="23-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="23" value="3" id="23-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+
+                <tr>
+                    <th id="num24">24</th>
+                    <th id="24">shows minimal or no response when others attempt to interact with him or her</th>
+                    <th> <input type="radio" name="24" value="0" id="24-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="24" value="1" id="24-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="24" value="2" id="24-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="24" value="3" id="24-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+                <tr>
+                    <th id="num25">25</th>
+                    <th id="25">displays little or no reciprocal social communication</th>
+                    <th> <input type="radio" name="25" value="0" id="25-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="25" value="1" id="25-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="25" value="2" id="25-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="25" value="3" id="25-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th id="num26">26</th>
+                    <th id="26">doesn't try to make friends with other people</th>
+                    <th> <input type="radio" name="26" value="0" id="26-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="26" value="1" id="26-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="26" value="2" id="26-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="26" value="3" id="26-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num27">27</th>
+                    <th id="27">fails to engage in creative, imaginative play</th>
+                    <th> <input type="radio" name="27" value="0" id="27-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="27" value="1" id="27-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="27" value="2" id="27-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="27" value="3" id="27-3"> 3 </br>
+                    </th>
+                </tr>
+            </tbody>
+            <!-- END table body -->
+        </table>
+        <!-- END table -->
+        <button id="next3" class="btn btn-primary"> Next </button>
+        <h4> 3/7 </h4>
+
+    </div>
+    <!-- END section 3 -->
+
+
+
+    <!-- Section 4 - SOCIAL COMMUNICATION-->
+    <div class="light-box fluid-container" style="display:none" id="section4">
+        <h2> Social Communication </h2>
+        <h4> Please indicate on a scale of 0 to 3 how much like the individual the behavior is. </h4>
+        <h5 id="yeah4"></h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <!-- Number -->
+                    <th>
+                        <h2>Behavior</h2>
+                    </th>
+                    <th> 0: not at all like </th>
+                    <th> 1: not much like </th>
+                    <th> 2: somewhat like </th>
+                    <th> 3: very much like </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th id="num28">28</th>
+                    <th id="28">responds appropriately to humorous stimuli</th>
+                    <th> <input type="radio" name="28" value="0" id="28-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="28" value="1" id="28-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="28" value="2" id="28-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="28" value="3" id="28-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num29">29</th>
+                    <th id="29">has difficulty understanding jokes</th>
+                    <th> <input type="radio" name="29" value="0" id="29-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="29" value="1" id="29-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="29" value="2" id="29-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="29" value="3" id="29-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num30">30</th>
+                    <th id="30">has difficulty understanding slang expressions</th>
+                    <th> <input type="radio" name="30" value="0" id="30-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="30" value="1" id="30-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="30" value="2" id="30-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="30" value="3" id="30-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num31">31</th>
+                    <th id="31">has difficulty identifying when someone is teasing</th>
+                    <th> <input type="radio" name="31" value="0" id="31-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="31" value="1" id="31-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="31" value="2" id="31-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="31" value="3" id="31-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num32">32</th>
+                    <th id="32">has difficulty understanding when he or she is being ridiculed</th>
+                    <th> <input type="radio" name="32" value="0" id="32-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="32" value="1" id="32-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="32" value="2" id="32-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="32" value="3" id="32-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num33">33</th>
+                    <th id="33">has difficulty understanding what causes people to dislike him or her</th>
+                    <th> <input type="radio" name="33" value="0" id="33-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="33" value="1" id="33-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="33" value="2" id="33-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="33" value="3" id="33-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num34">34</th>
+                    <th id="34">fails to predict probable consequences and social events</th>
+                    <th> <input type="radio" name="34" value="0" id="34-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="34" value="1" id="34-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="34" value="2" id="34-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="34" value="3" id="34-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num35">35</th>
+                    <th id="35">doesn't seem to understand that people have thoughts and feelings different from his or hers</th>
+                    <th> <input type="radio" name="35" value="0" id="35-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="35" value="1" id="35-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="35" value="2" id="35-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="35" value="3" id="35-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num36">36</th>
+                    <th id="36">doesn't seem to understand that the other person doesn't know something</th>
+                    <th> <input type="radio" name="36" value="0" id="36-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="36" value="1" id="36-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="36" value="2" id="36-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="36" value="3" id="36-3"> 3 </br>
+                    </th>
+                </tr>
+            </tbody>
+            <!-- END table body -->
+        </table>
+        <!-- END table -->
+        <button id="next4" class="btn btn-primary"> Next </button>
+        <h4> 4/7 </h4>
+
+    </div>
+    <!-- END section 4 -->
+
+
+
+
+    <!-- Section 5 - Emotional Responses-->
+    <div class="light-box fluid-container" style="display:none" id="section5">
+        <h2> Emotional Responses </h2>
+        <h4> Please indicate on a scale of 0 to 3 how much like the individual the behavior is: </h4>
+        <h5 id="yeah5"></h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <!-- Number -->
+                    <th>
+                        <h2>Behavior</h2>
+                    </th>
+                    <th> 0: not at all like </th>
+                    <th> 1: not much like </th>
+                    <th> 2: somewhat like </th>
+                    <th> 3: very much like </th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+
+                <tr>
+                    <th id="num37">37</th>
+                    <th id="37">needs an excessive amount of reassurance if things are changed or go wrong</th>
+                    <th> <input type="radio" name="37" value="0" id="37-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="37" value="1" id="37-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="37" value="2" id="37-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="37" value="3" id="37-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num38">38</th>
+                    <th id="38">becomes frustrated quickly when he or she cannot do something</th>
+                    <th> <input type="radio" name="38" value="0" id="38-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="38" value="1" id="38-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="38" value="2" id="38-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="38" value="3" id="38-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num39">39</th>
+                    <th id="39">temper tantrums when frustrated</th>
+                    <th> <input type="radio" name="39" value="0" id="39-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="39" value="1" id="39-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="39" value="2" id="39-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="39" value="3" id="39-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num40">40</th>
+                    <th id="40">becomes upset when routines are changed</th>
+                    <th> <input type="radio" name="40" value="0" id="40-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="40" value="1" id="40-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="40" value="2" id="40-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="40" value="3" id="40-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num41">41</th>
+                    <th id="41">responds negatively when given commands request or directions</th>
+                    <th> <input type="radio" name="41" value="0" id="41-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="41" value="1" id="41-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="41" value="2" id="41-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="41" value="3" id="41-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num42">42</th>
+                    <th id="42">has extreme reaction in response to loud, unexpected noise</th>
+                    <th> <input type="radio" name="42" value="0" id="42-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="42" value="1" id="42-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="42" value="2" id="42-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="42" value="3" id="42-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num43">43</th>
+                    <th id="43">temper tantrum when doesn't get his or her way</th>
+                    <th> <input type="radio" name="43" value="0" id="43-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="43" value="1" id="43-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="43" value="2" id="43-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="43" value="3" id="43-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num44">44</th>
+                    <th id="44">temper tantrums when told to stop doing something he or she enjoys doing</th>
+                    <th> <input type="radio" name="44" value="0" id="44-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="44" value="1" id="44-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="44" value="2" id="44-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="44" value="3" id="44-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+            </tbody>
+            <!-- END table body -->
+        </table>
+        <!-- END table -->
+        <button id="next5" class="btn btn-primary"> Next </button>
+        <h4> 5/7 </h4>
+
+    </div>
+    <!-- END section 5 -->
+
+
+
+
+    <!-- Section 6 - Cognitive Style-->
+    <div class="light-box fluid-container" style="display:none" id="section6">
+        <h2> Cognitive Style </h2>
+        <h4> Please indicate on a scale of 0 to 3 how much like the individual the behavior is: </h4>
+        <h5 id="yeah6"></h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <!-- Number -->
+                    <th>
+                        <h2>Behavior</h2>
+                    </th>
+                    <th> 0: not at all like </th>
+                    <th> 1: not much like </th>
+                    <th> 2: somewhat like </th>
+                    <th> 3: very much like </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th id="num45">45</th>
+                    <th id="45">uses exceptionally precise speech</th>
+                    <th> <input type="radio" name="45" value="0" id="45-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="45" value="1" id="45-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="45" value="2" id="45-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="45" value="3" id="45-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num46">46</th>
+                    <th id="46">attaches very concrete meanings to words</th>
+                    <th> <input type="radio" name="46" value="0" id="46-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="46" value="1" id="46-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="46" value="2" id="46-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="46" value="3" id="46-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num47">47</th>
+                    <th id="47">talks about a single subject excessively</th>
+                    <th> <input type="radio" name="47" value="0" id="47-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="47" value="1" id="47-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="47" value="2" id="47-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="47" value="3" id="47-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num48">48</th>
+                    <th id="48">makes naive remarks</th>
+                    <th> <input type="radio" name="48" value="0" id="48-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="48" value="1" id="48-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="48" value="2" id="48-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="48" value="3" id="48-3"> 3 </br>
+                    </th>
+                </tr>
+                <tr>
+                    <th id="num49">49</th>
+                    <th id="49">displays superior knowledge or skill in specific subjects</th>
+                    <th> <input type="radio" name="49" value="0" id="49-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="49" value="1" id="49-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="49" value="2" id="49-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="49" value="3" id="49-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num50">50</th>
+                    <th id="50">displays excellent memory</th>
+                    <th> <input type="radio" name="50" value="0" id="50-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="50" value="1" id="50-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="50" value="2" id="50-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="50" value="3" id="50-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num51">51</th>
+                    <th id="51">shows an intense obsessive interest in specific intellectual subjects</th>
+                    <th> <input type="radio" name="51" value="0" id="51-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="51" value="1" id="51-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="51" value="2" id="51-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="51" value="3" id="51-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+            </tbody>
+            <!-- END table body -->
+        </table>
+        <!-- END table -->
+        <button id="next6" class="btn btn-primary"> Next </button>
+        <h4> 6/7 </h4>
+    </div>
+    <!-- END section 6 -->
+
+
+
+
+    <!-- Section 7 - Maladaptive Speech-->
+    <div class="light-box fluid-container" style="display:none" id="section7">
+        <h2> Maladaptive Speech </h2>
+        <h4> Please indicate on a scale of 0 to 3 how much like the individual the behavior is: </h4>
+        <h5 id="yeah7"></h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <!-- Number -->
+                    <th>
+                        <h2>Behavior</h2>
+                    </th>
+                    <th> 0: not at all like </th>
+                    <th> 1: not much like </th>
+                    <th> 2: somewhat like </th>
+                    <th> 3: very much like </th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <tr>
+                    <th id="num52">52</th>
+                    <th id="52">repeats words or phrases verbally or with signs</th>
+                    <th> <input type="radio" name="52" value="0" id="52-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="52" value="1" id="52-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="52" value="2" id="52-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="52" value="3" id="52-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num53">53</th>
+                    <th id="53">repeats words out of context</th>
+                    <th> <input type="radio" name="53" value="0" id="53-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="53" value="1" id="53-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="53" value="2" id="53-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="53" value="3" id="53-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num54">54</th>
+                    <th id="54">speaks with flat tone, or affect</th>
+                    <th> <input type="radio" name="54" value="0" id="54-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="54" value="1" id="54-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="54" value="2" id="54-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="54" value="3" id="54-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num55">55</th>
+                    <th id="55">uses yes and no inappropriately. Says yes when asked if he or she wants an adverse of stimulus or says no when asked if he or she wants a favorite treat or toy</th>
+                    <th> <input type="radio" name="55" value="0" id="55-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="55" value="1" id="55-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="55" value="2" id="55-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="55" value="3" id="55-3"> 3 </br>
+                    </th>
+                </tr>
+
+
+
+                <tr>
+                    <th id="num56">56</th>
+                    <th id="56">uses he or she instead of I when referring to self</th>
+                    <th> <input type="radio" name="56" value="0" id="56-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="56" value="1" id="56-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="56" value="2" id="56-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="56" value="3" id="56-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num57">57</th>
+                    <th id="57">speech is abnormal in tone, volume or rate</th>
+                    <th> <input type="radio" name="57" value="0" id="57-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="57" value="1" id="57-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="57" value="2" id="57-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="57" value="3" id="57-3"> 3 </br>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th id="num58">58</th>
+                    <th id="58">displays idiosyncratic words or phrases that have no meaning to others</th>
+                    <th> <input type="radio" name="58" value="0" id="58-0"> 0 </br>
+                    </th>
+                    <th> <input type="radio" name="58" value="1" id="58-1"> 1 </br>
+                    </th>
+                    <th> <input type="radio" name="58" value="2" id="58-2"> 2 </br>
+                    </th>
+                    <th> <input type="radio" name="58" value="3" id="58-3"> 3 </br>
+                    </th>
+                </tr>
+            </tbody>
+            <!-- END table body -->
+        </table>
+        </br>
+        <!-- END table -->
+
+        <button id="submit" class="btn btn-primary"> Submit </button>
+        <h4> 7/7 </h4>
+    </div>
+    <!-- END section 7 -->
+
+
+
+
+    <div class="light-box fluid-container" style="display:none" id="complete">
+        <h3> Thank you for completing this survery! </h3>
+    </div>
+    <!-- END complete -->
+
+
+
+
+    <div class="light-box fluid-container" style="display:none" id="adminSection">
+
+        <p>Gilliam Autism Rating Scale Third Edition -- Results:</p>
+        <p id="date">Date:</p>
+        <p id="respondent">Respondent:</p>
+        </break>
+
+        <p>The GARS 3 behavioral checklist is used for the assessment of individuals who have severe behavioral problems and helps to identify autism. According to the GARS manual, the autism quotient provides the best prediction (within this test) of autism.
+            The normative sample for this assessment was composed entirely of individuals diagnosed as autistic. An "average" score, therefore, indicates average levels of behavior compared with students with autism. Scaled Score average range is from
+            8-12.
+        </p>
+        </break>
+
+        <p id="autismQuotient">Student’s Autism Quotient according to the responses from rater is * which indicates a * probability of autism.</p>
+        </break>
+
+        <p>The following items were rated as "Somewhat like the individual" or "Very Much like the individual":</p>
+        </break>
+
+        <p id="sec2Score">RESTRICTED/REPETITIVE Behaviors (Scaled Score of *)-</p>
+        </break>
+        <p id="sec2Somewhat">SOMEWHAT LIKE the INDIVIDUAL:</p>
+        </break>
+        <p id="sec2VeryMuchLike">VERY MUCH LIKE the INDIVIDUAL:</p>
+        </break>
+
+        <p> ------------------------------------------------------------------------------------------------------------------ </p>
+
+        <p id="sec3Score">Social Interaction (Scaled Score of *)-</p>
+        </break>
+        <p id="sec3Somewhat">SOMEWHAT LIKE the INDIVIDUAL:</p>
+        </break>
+        <p id="sec3VeryMuchLike">VERY MUCH LIKE the INDIVIDUAL:</p>
+        </break>
+
+        <p> ------------------------------------------------------------------------------------------------------------------ </p>
+
+        <p id="sec4Score">Social Communication (Scaled Score of *)-</p>
+        </break>
+        <p id="sec4Somewhat">SOMEWHAT LIKE the INDIVIDUAL:</p>
+        </break>
+        <p id="sec4VeryMuchLike">VERY MUCH LIKE the INDIVIDUAL:</p>
+        </break>
+
+        <p> ------------------------------------------------------------------------------------------------------------------ </p>
+
+        <p id="sec5Score">Emotional Responses (Scaled Score of *)-</p>
+        </break>
+        <p id="sec5Somewhat">SOMEWHAT LIKE the INDIVIDUAL:</p>
+        </break>
+        <p id="sec5VeryMuchLike">VERY MUCH LIKE the INDIVIDUAL:</p>
+        </break>
+
+        <p> ------------------------------------------------------------------------------------------------------------------ </p>
+
+        <p id="sec6Score">Cognitive Style (Scaled Score of *)-</p>
+        </break>
+        <p id="sec6Somewhat">SOMEWHAT LIKE the INDIVIDUAL:</p>
+        </break>
+        <p id="sec6VeryMuchLike">VERY MUCH LIKE the INDIVIDUAL:</p>
+        </break>
+
+        <p> ------------------------------------------------------------------------------------------------------------------ </p>
+
+        <p id="sec7Score">Maladaptive Speech (Scaled Score of *)-</p>
+        </break>
+        <p id="sec7Somewhat">SOMEWHAT LIKE the INDIVIDUAL:</p>
+        </break>
+        <p id="sec7VeryMuchLike">VERY MUCH LIKE the INDIVIDUAL:</p>
+        </break>
+        <!-- <button id="reset"> Reset </button> -->
+
+    </div>
+    <!-- END admin section -->
+
+    <div class="fluid-container footer">
+        <button id="home" class="btn btn-primary"> Home </button>
+        <button id="admin" class="btn btn-primary"> Admin </button>
+        <a href="https://run.plnkr.co/plunks/urUjnN/"><button id="portfolio" class="btn btn-primary">Portfolio</button></a>
+    </div>
+</div>
+<!--END background, LAST LINE -->
+
+</html>
+
+<style>
+    /* colors:
+    aqua1: #A0D1C2
+    aqua2: #5AAF94
+    aqua3: #2F755E
+    aqua4: #0B513D
+    aqua5: #053325
+    white: #e1e8e5
+  */
+    
+    .heading {
+        background-color: #0B513D;
+        color: #e1e8e5;
+        margin: 0.5% 15% 2%;
+        padding: 0.5% 0.5% 1%;
+        border-radius: 15px;
+        text-align: center;
+    }
+    
+    .footer {
+        background-color: #0B513D;
+        color: #e1e8e5;
+        margin: 1% 35%;
+        padding: 0.5% 2%;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 1.8;
+    }
+    
+    body {
+        background-color: #A0D1C2;
+        padding: 0.5% 10% 0.5%;
+    }
+    
+    .light-box {
+        background-color: #5AAF94;
+        color: #0B513D;
+        margin: 2% 3%;
+        padding: 3% 10% 1%;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 2;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #2F755E;
+        color: #e1e8e5;
+    }
+    
+    tr:hover,
+    #submit:hover,
+    #next1:hover,
+    #next2:hover,
+    #next3:hover,
+    #next4:hover,
+    #next5:hover,
+    #next6:hover,
+    #admin:hover,
+    #home:hover,
+    #portfolio:hover {
+        background-color: #A0D1C2;
+        color: #2F755E;
+    }
+    
+    table,
+    th,
+    td {
+        margin: 2% 0%;
+        border-radius: 15px;
+        font-size: 15px;
+        vertical-align: middle;
+    }
+    
+    #next1,
+    #next2,
+    #next3,
+    #next4,
+    #next5,
+    #next6,
+    #submit {
+        background-color: #0B513D;
+        border-color: #0B513D;
+        border-radius: 7px;
+        font-size: 18px;
+        font-family: Brandon Grotesque;
+        padding: 1% 2%;
+        margin: 1%;
+    }
+    
+    #admin,
+    #home,
+    #portfolio {
+        background-color: #2F755E;
+        border-color: #2F755E;
+        border-radius: 5px;
+        border-width: 50%;
+        font-size: 17px;
+        font-family: Brandon Grotesque;
+        padding: 2% 2.5%;
+        margin: 2%;
+    }
+    
+    #complete {
+        padding: 2%;
+    }
+    
+    input {
+        border-style: solid;
+        border-color: #0B513D;
+        border-radius: 15px;
+        width: 20%;
+    }
+    
+    label {
+        font-size: 0.95vw;
+        width: 85%;
+        margin: 1.5% 5% 0.5% 0%;
+    }
+    
+    #adminSection {
+        font-size: 15px;
+        text-align: left;
+        color: black;
+        font-family: "Times New Roman";
+        padding: 4% 5% 3%;
+    }
+    
+    #date1,
+    #student-first-name,
+    #relationship-to-student,
+    #respondent-name {
+        width: 50%;
+        margin: 2.5% 25% 7%;
+        font-family: Times New Roman;
+        font-size: 0.85vw;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        font-family: Trebuche MS;
+        text-align: center;
+    }
+    /* major headings */
+    
+    h4,
+    h5 {
+        font-family: Brandon Grotesque;
+        text-align: center;
+    }
+    /* minor headings */
+    
+    h6 {
+        font-family: Brandon Grotesque;
+        text-align: left;
+    }
+    
+    p {
+        font-family: Merriweather;
+    }
+    
+    #yeah2,
+    #yeah3,
+    #yeah4,
+    #yeah5,
+    #yeah6,
+    #yeah7 {
+        margin: 2% 20%;
+        padding: 0.5%;
+        font-size: 16px;
+        border-radius: 2px;
+    }
+    /* regular ol' text*/
+</style>
+
+<script>
+    $(document).ready(function() {
+
+        /*Variables*/
+        var studentFirstName;
+        var respondentName;
+        var relationship;
+        var date;
+        var sumSubScales = 0;
+        var scaledScore2 = 0;
+        var scaledScore3 = 0;
+        var scaledScore4 = 0;
+        var scaledScore5 = 0;
+        var scaledScore6 = 0;
+        var scaledScore7 = 0;
+        var autismIndex = 0;
+        var somewhatText = "SOMEWHAT LIKE the INDIVIDUAL: ";
+        var veryMuchLikeText = "VERY MUCH LIKE the INDIVIDUAL: ";
+        var text = "Please complete items: ";
+
+        /*Variables section2 */
+        var isChecked2 = [];
+        var behaviorText2 = [];
+        var nums2 = [];
+        var checked0_2 = [];
+        var checked1_2 = [];
+        var checked2_2 = [];
+        var checked3_2 = [];
+
+        /*END Variables*/
+
+
+
+        /* Functions */
+        function yellow(sectionTrue, nums, texta, textb, textc) {
+            sectionTrue.push(" " + nums[i]);
+            texta = sectionTrue.toString();
+            textb = texta.lastIndexOf(",");
+            if (textb > 0) {
+                textc = texta.slice(textb, textb + nums[i].length).replace(/,/, " & " + nums[i]);
+                texta = text + texta.slice(0, textb).concat(textc);
+                return texta;
+            } else if (textb < 0) {
+                texta = "Please complete item: " + sectionTrue;
+                return texta;
+            }
+        } /*END function Yellow */
+
+        function somewhatLike(value2, var2True, behaviorText, text2a, text2b, text2c) {
+
+            if (value2[i] === true) {
+                var2True.push(" " + behaviorText[i]);
+                text2a = var2True.toString();
+                text2b = text2a.lastIndexOf(",");
+                text2c = text2a.slice(text2b, text2b + behaviorText[i].length + 3).replace(/,/, " and");
+                text2a = text2 + text2a.slice(0, text2b).concat(text2c) + ".";
+                return text2a;
+            }
+        } /*END function somewhatLike */
+
+        function veryMuchLike(value3, var3True, behaviorText, text3a, text3b, text3c) {
+            if (value3[i] === true) {
+                var3True.push(" " + behaviorText[i]);
+                text3a = var3True.toString();
+                text3b = text3a.lastIndexOf(",");
+                text3c = text3a.slice(text3b, text3b + behaviorText[i].length + 3).replace(/,/, " and");
+                text3a = text3 + text3a.slice(0, text3b).concat(text3c) + ".";
+                return text3a;
+            }
+        } /*END function veryMuchLike */
+
+        $(function scroll() {
+            $('html').scrollTop(0);
+        });
+
+        /*END functions */
+
+        /*Section 1 */
+        $("#next1").click(function() {
+            studentFirstName = $("#student-first-name").val();
+            respondentName = $("#respondent-name").val();
+            relationship = $("#relationship-to-student").val();
+            date = $("#date1").val();
+
+            if (studentFirstName === "" || respondentName === "" || relationship === "" || date === "") {
+                swal("Please complete all fields");
+
+                $("#section1").show();
+            } else {
+                $("#section1").hide();
+                $("#section2").show();
+                $("#date").text("Date: " + date);
+                $("#respondent").text("Respondent: " + respondentName + ", " + relationship);
+            }
+            console.log(studentFirstName, respondentName, relationship, date);
+
+            scroll();
+        }); /*END Section 1 */
+
+
+        /*Section 2 --- Restricted Repetitive Behaviors--- */
+        $("#next2").click(function() {
+            isChecked2 = [!$("input[name=1]").is(":checked"), !$("input[name=2]").is(":checked"), !$("input[name=3]").is(":checked"), !$("input[name=4]").is(":checked"), !$("input[name=5]").is(":checked"),
+
+                !$("input[name=6]").is(":checked"), !$("input[name=7]").is(":checked"), !$("input[name=8]").is(":checked"), !$("input[name=9]").is(":checked"), !$("input[name=10]").is(":checked"),
+
+                !$("input[name=11]").is(":checked"), !$("input[name=12]").is(":checked"), !$("input[name=13]").is(":checked"),
+                false
+            ];
+            behaviorText2 = [
+                $("#1").text(),
+                $("#2").text(),
+                $("#3").text(),
+                $("#4").text(),
+                $("#5").text(),
+
+                $("#6").text(),
+                $("#7").text(),
+                $("#8").text(),
+                $("#9").text(),
+                $("#10").text(),
+
+                $("#11").text(),
+                $("#12").text(),
+                $("#13").text()
+            ];
+            nums2 = [
+                $("#num1").text(),
+                $("#num2").text(),
+                $("#num3").text(),
+                $("#num4").text(),
+                $("#num5").text(),
+
+                $("#num6").text(),
+                $("#num7").text(),
+                $("#num8").text(),
+                $("#num9").text(),
+                $("#num10").text(),
+
+                $("#num11").text(),
+                $("#num12").text(),
+                $("#num13").text()
+            ];
+            checked0_2 = [
+                $("#1-0").is(":checked"),
+                $("#2-0").is(":checked"),
+                $("#3-0").is(":checked"),
+                $("#4-0").is(":checked"),
+                $("#5-0").is(":checked"),
+
+                $("#6-0").is(":checked"),
+                $("#7-0").is(":checked"),
+                $("#8-0").is(":checked"),
+                $("#9-0").is(":checked"),
+                $("#10-0").is(":checked"),
+
+                $("#11-0").is(":checked"),
+                $("#12-0").is(":checked"),
+                $("#13-0").is(":checked")
+            ];
+            checked1_2 = [
+                $("#1-1").is(":checked"),
+                $("#2-1").is(":checked"),
+                $("#3-1").is(":checked"),
+                $("#4-1").is(":checked"),
+                $("#5-1").is(":checked"),
+
+                $("#6-1").is(":checked"),
+                $("#7-1").is(":checked"),
+                $("#8-1").is(":checked"),
+                $("#9-1").is(":checked"),
+                $("#10-1").is(":checked"),
+
+                $("#11-1").is(":checked"),
+                $("#12-1").is(":checked"),
+                $("#13-1").is(":checked")
+            ];
+            checked2_2 = [
+                $("#1-2").is(":checked"),
+                $("#2-2").is(":checked"),
+                $("#3-2").is(":checked"),
+                $("#4-2").is(":checked"),
+                $("#5-2").is(":checked"),
+
+                $("#6-2").is(":checked"),
+                $("#7-2").is(":checked"),
+                $("#8-2").is(":checked"),
+                $("#9-2").is(":checked"),
+                $("#10-2").is(":checked"),
+
+                $("#11-2").is(":checked"),
+                $("#12-2").is(":checked"),
+                $("#13-2").is(":checked")
+            ];
+            checked3_2 = [
+                $("#1-3").is(":checked"),
+                $("#2-3").is(":checked"),
+                $("#3-3").is(":checked"),
+                $("#4-3").is(":checked"),
+                $("#5-3").is(":checked"),
+
+                $("#6-3").is(":checked"),
+                $("#7-3").is(":checked"),
+                $("#8-3").is(":checked"),
+                $("#9-3").is(":checked"),
+                $("#10-3").is(":checked"),
+
+                $("#11-3").is(":checked"),
+                $("#12-3").is(":checked"),
+                $("#13-3").is(":checked")
+            ];
+
+
+            /*isChecked2, behaviorText2, checked0, checked1, checked2, checked3, nums2 */
+            var i;
+            var rawScore = 0;
+            var texta, textb, textc;
+
+            var somewhatText2 = [];
+            var somewhatText2True = [];
+            var somewhatA, somewhatB, somewhatC;
+
+            var veryMuchLikeText2 = [];
+            var veryMuchLikeText2True = [];
+            var veryMuchLikeA, veryMuchLikeB, veryMuchLikeC;
+
+            var sectionTwoTrue = [];
+
+            for (i = 0; i < isChecked2.length; i++) {
+
+
+                /*yellow, real time text */
+                if (isChecked2[i] === true) {
+                    $("#section2").show();
+                    sectionTwoTrue.push(" " + nums2[i]);
+                    texta = sectionTwoTrue.toString();
+                    textb = texta.lastIndexOf(",");
+
+                    if (textb > 0) {
+                        textc = texta.slice(textb, textb + nums2[i].length).replace(/,/, " & " + nums2[i]);
+                        texta = text + texta.slice(0, textb).concat(textc);
+                    } else if (textb < 0) {
+                        texta = "Please complete item: " + sectionTwoTrue;
+                    }
+                    $("#yeah2").text(texta).css("background-color", "yellow");
+                    /*console.log(texta, textb, textc, isChecked[i]);*/
+                } else if (isChecked2[i] === false) {
+
+                    if (isChecked2[i - 1] === true || isChecked2[i - 2] === true || isChecked2[i - 3] === true || isChecked2[i - 4] === true || isChecked2[i - 5] === true || isChecked2[i - 6] === true || isChecked2[i - 7] === true || isChecked2[i - 8] === true || isChecked2[i - 9] === true || isChecked2[i - 10] === true || isChecked2[i - 11] === true || isChecked2[i - 12] === true || isChecked2[i - 13] === true) {
+                        $("#section2").show();
+                        $("#section3").hide();
+                    } else {
+                        $("#section3").show();
+                        $("#section2").hide();
+                    }
+                } /* END yellow, real time text */
+
+
+
+
+                /* SOMEWHAT text admin page */
+
+                if (checked2_2[i] === true) {
+                    somewhatText2True.push(" " + behaviorText2[i]);
+                    somewhatA = somewhatText2True.toString();
+                    somewhatB = somewhatA.lastIndexOf(",");
+                    somewhatC = somewhatA.slice(somewhatB, somewhatB + behaviorText2[i].length + 3).replace(/,/, " and");
+                    somewhatA = somewhatText2 + somewhatA.slice(0, somewhatB).concat(somewhatC) + ".";
+
+                    $("#sec2Somewhat").text(somewhatText + somewhatA);
+                    /* console.log(somewhatA);*/
+                } /* END SOMEWHAT text admin page */
+
+
+                /* VERY MUCH LIKE text admin page */
+                else if (checked3_2[i] === true) {
+                    veryMuchLikeText2True.push(" " + behaviorText2[i]);
+                    veryMuchLikeA = veryMuchLikeText2True.toString();
+                    veryMuchLikeB = veryMuchLikeA.lastIndexOf(",");
+                    veryMuchLikeC = veryMuchLikeA.slice(veryMuchLikeB, veryMuchLikeB + behaviorText2[i].length + 3).replace(/,/, " and");
+                    veryMuchLikeA = veryMuchLikeText2 + veryMuchLikeA.slice(0, veryMuchLikeB).concat(veryMuchLikeC) + ".";
+                    $("#sec2VeryMuchLike").text(veryMuchLikeText + veryMuchLikeA);
+                }
+                /*console.log(veryMuchLikeC, veryMuchLikeB, veryMuchLikeA); */
+                /* END VERY MUCH LIKE text admin page */
+
+
+                /* RAW Score */
+                if (checked0_2[i] === true) {
+                    rawScore += 0;
+                } else if (checked1_2[i] === true) {
+                    rawScore += 1;
+                } else if (checked2_2[i] === true) {
+                    rawScore += 2;
+                } else if (checked3_2[i] === true) {
+                    rawScore += 3;
+                }
+
+
+                console.log(rawScore);
+                /* END RAW SCORE */
+
+
+            } /*END i for loop*/
+
+            /* Scaled Score */
+            if (rawScore == 0 || rawScore == 1 || rawScore == 2 || rawScore == 3) {
+                scaledScore2 = 4;
+            } else if (rawScore == 4 || rawScore == 5 || rawScore == 6) {
+                scaledScore2 = 5;
+            } else if (rawScore == 7 || rawScore == 8 || rawScore == 9) {
+                scaledScore2 = 6;
+            } else if (rawScore == 10 || rawScore == 11 || rawScore == 12 || rawScore == 13) {
+                scaledScore2 = 7;
+            } else if (rawScore == 14 || rawScore == 15 || rawScore == 16) {
+                scaledScore2 = 8;
+            } else if (rawScore == 17 || rawScore == 18 || rawScore == 19) {
+                scaledScore2 = 9;
+            } else if (rawScore == 20 || rawScore == 21 || rawScore == 22) {
+                scaledScore2 = 10;
+            } else if (rawScore == 23 || rawScore == 24 || rawScore == 25 || rawScore == 26) {
+                scaledScore2 = 11;
+            } else if (rawScore == 27 || rawScore == 28 || rawScore == 29) {
+                scaledScore2 = 12;
+            } else if (rawScore == 30 || rawScore == 31 || rawScore == 32) {
+                scaledScore2 = 13;
+            } else if (rawScore == 33 || rawScore == 34 || rawScore == 35 || rawScore == 36) {
+                scaledScore2 = 14;
+            } else if (rawScore == 37 || rawScore == 38 || rawScore == 39) {
+                scaledScore2 = 15;
+            }
+
+
+
+            $("#sec2Score").text("RESTRICTED/REPETITIVE Behaviors (Scaled Score of " + scaledScore2 + ")-");
+            console.log(rawScore, scaledScore2, sumSubScales);
+            /* END Scaled Score */
+
+
+
+
+            $('body').scrollTop(0);
+
+
+        }); /*END Section 2 */
+
+
+        /*Section 3 --- Social Interaction --- */
+        $("#next3").click(function() {
+            var isChecked3 = [!$("input[name=14]").is(":checked"), !$("input[name=15]").is(":checked"),
+
+                !$("input[name=16]").is(":checked"), !$("input[name=17]").is(":checked"), !$("input[name=18]").is(":checked"), !$("input[name=19]").is(":checked"), !$("input[name=20]").is(":checked"),
+
+                !$("input[name=21]").is(":checked"), !$("input[name=22]").is(":checked"), !$("input[name=23]").is(":checked"), !$("input[name=24]").is(":checked"), !$("input[name=25]").is(":checked"),
+
+                !$("input[name=26]").is(":checked"), !$("input[name=27]").is(":checked"),
+                false
+            ];
+            var behaviorText3 = [
+                $("#14").text(),
+                $("#15").text(),
+
+                $("#16").text(),
+                $("#17").text(),
+                $("#18").text(),
+                $("#19").text(),
+                $("#20").text(),
+
+                $("#21").text(),
+                $("#22").text(),
+                $("#23").text(),
+                $("#24").text(),
+                $("#25").text(),
+
+                $("#26").text(),
+                $("#27").text()
+            ];
+            var nums3 = [
+                $("#num14").text(),
+                $("#num15").text(),
+
+
+                $("#num16").text(),
+                $("#num17").text(),
+                $("#num18").text(),
+                $("#num19").text(),
+                $("#num20").text(),
+
+                $("#num21").text(),
+                $("#num22").text(),
+                $("#num23").text(),
+                $("#num24").text(),
+                $("#num25").text(),
+
+                $("#num26").text(),
+                $("#num27").text()
+            ];
+
+            var checked0_3 = [
+                $("#14-0").is(":checked"),
+                $("#15-0").is(":checked"),
+
+                $("#16-0").is(":checked"),
+                $("#17-0").is(":checked"),
+                $("#18-0").is(":checked"),
+                $("#19-0").is(":checked"),
+                $("#20-0").is(":checked"),
+
+                $("#21-0").is(":checked"),
+                $("#22-0").is(":checked"),
+                $("#23-0").is(":checked"),
+                $("#24-0").is(":checked"),
+                $("#25-0").is(":checked"),
+
+                $("#26-0").is(":checked"),
+                $("#27-0").is(":checked")
+            ];
+            var checked1_3 = [
+                $("#14-1").is(":checked"),
+                $("#15-1").is(":checked"),
+
+                $("#16-1").is(":checked"),
+                $("#17-1").is(":checked"),
+                $("#18-1").is(":checked"),
+                $("#19-1").is(":checked"),
+                $("#20-1").is(":checked"),
+
+                $("#21-1").is(":checked"),
+                $("#22-1").is(":checked"),
+                $("#23-1").is(":checked"),
+                $("#24-1").is(":checked"),
+                $("#25-1").is(":checked"),
+
+                $("#26-1").is(":checked"),
+                $("#27-1").is(":checked")
+            ];
+            var checked2_3 = [
+                $("#14-2").is(":checked"),
+                $("#15-2").is(":checked"),
+
+                $("#16-2").is(":checked"),
+                $("#17-2").is(":checked"),
+                $("#18-2").is(":checked"),
+                $("#19-2").is(":checked"),
+                $("#20-2").is(":checked"),
+
+                $("#21-2").is(":checked"),
+                $("#22-2").is(":checked"),
+                $("#23-2").is(":checked"),
+                $("#24-2").is(":checked"),
+                $("#25-2").is(":checked"),
+
+                $("#26-2").is(":checked"),
+                $("#27-2").is(":checked")
+            ];
+            var checked3_3 = [
+                $("#14-3").is(":checked"),
+                $("#15-3").is(":checked"),
+
+                $("#16-3").is(":checked"),
+                $("#17-3").is(":checked"),
+                $("#18-3").is(":checked"),
+                $("#19-3").is(":checked"),
+                $("#20-3").is(":checked"),
+
+                $("#21-3").is(":checked"),
+                $("#22-3").is(":checked"),
+                $("#23-3").is(":checked"),
+                $("#24-3").is(":checked"),
+                $("#25-3").is(":checked"),
+
+                $("#26-3").is(":checked"),
+                $("#27-3").is(":checked")
+            ];
+
+            var i;
+            var rawScore = 0;
+            var text = "Please complete items: ";
+            var texta, textb, textc;
+
+            var somewhatText3 = [];
+            var somewhatText3True = [];
+            var somewhatA, somewhatB, somewhatC;
+
+            var veryMuchLikeText3 = [];
+            var veryMuchLikeText3True = [];
+            var veryMuchLikeA, veryMuchLikeB, veryMuchLikeC;
+
+
+            var sectionThreeTrue = [];
+
+
+
+
+
+            for (i = 0; i < isChecked3.length; i++) {
+
+
+                /*yellow, real time text */
+                if (isChecked3[i] === true) {
+                    $("#section3").show();
+                    sectionThreeTrue.push(" " + nums3[i]);
+                    texta = sectionThreeTrue.toString();
+                    textb = texta.lastIndexOf(",");
+
+                    if (textb > 0) {
+                        textc = texta.slice(textb, textb + nums3[i].length).replace(/,/, " & " + nums3[i]);
+                        texta = text + texta.slice(0, textb).concat(textc);
+                    } else if (textb < 0) {
+                        texta = "Please complete item: " + sectionThreeTrue;
+                    }
+                    $("#yeah3").text(texta).css("background-color", "yellow");
+                    /*console.log(texta, textb, textc, isChecked[i]);*/
+                } else if (isChecked3[i] === false) {
+
+                    if (isChecked3[i - 1] === true || isChecked3[i - 2] === true || isChecked3[i - 3] === true || isChecked3[i - 4] === true || isChecked3[i - 5] === true || isChecked3[i - 6] === true || isChecked3[i - 7] === true || isChecked3[i - 8] === true || isChecked3[i - 9] === true || isChecked3[i - 10] === true || isChecked3[i - 11] === true || isChecked3[i - 12] === true || isChecked3[i - 13] === true) {
+                        $("#section3").show();
+                        $("#section4").hide();
+                    } else {
+                        $("#section3").hide();
+                        $("#section4").show();
+                    }
+                } /* END  yellow, real time text */
+
+
+
+
+                /* SOMEWHAT text admin page */
+
+                if (checked2_3[i] === true) {
+                    somewhatText3True.push(" " + behaviorText3[i]);
+                    somewhatA = somewhatText3True.toString();
+                    somewhatB = somewhatA.lastIndexOf(",");
+                    somewhatC = somewhatA.slice(somewhatB, somewhatB + behaviorText3[i].length + 3).replace(/,/, " and");
+                    somewhatA = somewhatText3 + somewhatA.slice(0, somewhatB).concat(somewhatC) + ".";
+
+                    $("#sec3Somewhat").text(somewhatText + somewhatA);
+                    /* console.log(somewhatA);*/
+                } /* END SOMEWHAT text admin page */
+
+
+                /* VERY MUCH LIKE text admin page */
+                else if (checked3_3[i] === true) {
+                    veryMuchLikeText3True.push(" " + behaviorText3[i]);
+                    veryMuchLikeA = veryMuchLikeText3True.toString();
+                    veryMuchLikeB = veryMuchLikeA.lastIndexOf(",");
+                    veryMuchLikeC = veryMuchLikeA.slice(veryMuchLikeB, veryMuchLikeB + behaviorText3[i].length + 3).replace(/,/, " and");
+                    veryMuchLikeA = veryMuchLikeText3 + veryMuchLikeA.slice(0, veryMuchLikeB).concat(veryMuchLikeC) + ".";
+                    $("#sec3VeryMuchLike").text(veryMuchLikeText + veryMuchLikeA);
+                }
+                /*console.log(veryMuchLikeC, veryMuchLikeB, veryMuchLikeA); */
+                /* END VERY MUCH LIKE text admin page */
+
+
+                /* RAW Score */
+                if (checked0_3[i] === true) {
+                    rawScore += 0;
+                } else if (checked1_3[i] === true) {
+                    rawScore += 1;
+                } else if (checked2_3[i] === true) {
+                    rawScore += 2;
+                } else if (checked3_3[i] === true) {
+                    rawScore += 3;
+                }
+
+                console.log(rawScore);
+                /* END RAW SCORE */
+
+
+            } /*END i for loop*/
+
+            /* Scaled Score */
+            if (rawScore == 0) {
+                scaledScore3 = 3;
+            } else if (rawScore == 1 || rawScore == 2 || rawScore == 3 || rawScore == 4) {
+                scaledScore3 = 4;
+            } else if (rawScore == 5 || rawScore == 6 || rawScore == 7 || rawScore == 8) {
+                scaledScore3 = 5;
+            } else if (rawScore == 9 || rawScore == 10 || rawScore == 11 || rawScore == 12) {
+                scaledScore3 = 6;
+            } else if (rawScore == 13 || rawScore == 14 || rawScore == 15) {
+                scaledScore3 = 7;
+            } else if (rawScore == 16 || rawScore == 17 || rawScore == 18 || rawScore == 19) {
+                scaledScore3 = 8;
+            } else if (rawScore == 20 || rawScore == 21 || rawScore == 22 || rawScore == 23) {
+                scaledScore3 = 9;
+            } else if (rawScore == 24 || rawScore == 25 || rawScore == 26 || rawScore == 27) {
+                scaledScore3 = 10;
+            } else if (rawScore == 28 || rawScore == 29 || rawScore == 30) {
+                scaledScore3 = 11;
+            } else if (rawScore == 31 || rawScore == 32 || rawScore == 33 || rawScore == 34) {
+                scaledScore3 = 12;
+            } else if (rawScore == 35 || rawScore == 36 || rawScore == 37 || rawScore == 38) {
+                scaledScore3 = 13;
+            } else if (rawScore == 39 || rawScore == 40 || rawScore == 41 || rawScore == 42) {
+                scaledScore3 = 14;
+            }
+
+
+
+
+            $("#sec3Score").text("Social Interaction (Scaled Score of " + scaledScore3 + ")-");
+            console.log(rawScore, scaledScore3, sumSubScales);
+            /* END Scaled Score */
+
+            $('body').scrollTop(0);
+
+        }); /*END Section 3 */
+
+
+        /*Section 4 --- Social Communication --- */
+        $('#next4').click(function() {
+            var isChecked4 = [!$("input[name=28]").is(":checked"), !$("input[name=29]").is(":checked"), !$("input[name=30]").is(":checked"),
+
+                !$("input[name=31]").is(":checked"), !$("input[name=32]").is(":checked"), !$("input[name=33]").is(":checked"), !$("input[name=34]").is(":checked"), !$("input[name=35]").is(":checked"),
+
+                !$("input[name=36]").is(":checked"),
+                false
+            ];
+            var behaviorText4 = [
+                $("#28").text(),
+                $("#29").text(),
+                $("#30").text(),
+
+                $("#31").text(),
+                $("#32").text(),
+                $("#33").text(),
+                $("#34").text(),
+                $("#35").text(),
+
+                $("#36").text()
+            ];
+            var nums4 = [
+                $("#num28").text(),
+                $("#num29").text(),
+                $("#num30").text(),
+
+                $("#num31").text(),
+                $("#num32").text(),
+                $("#num33").text(),
+                $("#num34").text(),
+                $("#num35").text(),
+
+                $("#num36").text()
+            ];
+            var checked0_4 = [
+                $("#28-0").is(":checked"),
+                $("#29-0").is(":checked"),
+                $("#30-0").is(":checked"),
+
+                $("#31-0").is(":checked"),
+                $("#32-0").is(":checked"),
+                $("#33-0").is(":checked"),
+                $("#34-0").is(":checked"),
+                $("#35-0").is(":checked"),
+
+                $("#36-0").is(":checked")
+            ];
+            var checked1_4 = [
+                $("#28-1").is(":checked"),
+                $("#29-1").is(":checked"),
+                $("#30-1").is(":checked"),
+
+                $("#31-1").is(":checked"),
+                $("#32-1").is(":checked"),
+                $("#33-1").is(":checked"),
+                $("#34-1").is(":checked"),
+                $("#35-1").is(":checked"),
+
+                $("#36-1").is(":checked")
+            ];
+            var checked2_4 = [
+                $("#28-2").is(":checked"),
+                $("#29-2").is(":checked"),
+                $("#30-2").is(":checked"),
+
+                $("#31-2").is(":checked"),
+                $("#32-2").is(":checked"),
+                $("#33-2").is(":checked"),
+                $("#34-2").is(":checked"),
+                $("#35-2").is(":checked"),
+
+                $("#36-2").is(":checked")
+            ];
+            var checked3_4 = [
+                $("#28-3").is(":checked"),
+                $("#29-3").is(":checked"),
+                $("#30-3").is(":checked"),
+
+                $("#31-3").is(":checked"),
+                $("#32-3").is(":checked"),
+                $("#33-3").is(":checked"),
+                $("#34-3").is(":checked"),
+                $("#35-3").is(":checked"),
+
+                $("#36-3").is(":checked")
+            ];
+
+            var i;
+            var rawScore = 0;
+            var text = "Please complete items: ";
+            var texta, textb, textc;
+
+            var somewhatText4 = [];
+            var somewhatText4True = [];
+            var somewhatA, somewhatB, somewhatC;
+
+            var veryMuchLikeText4 = [];
+            var veryMuchLikeText4True = [];
+            var veryMuchLikeA, veryMuchLikeB, veryMuchLikeC;
+
+
+            var sectionFourTrue = [];
+
+
+
+
+
+            for (i = 0; i < isChecked4.length; i++) {
+
+
+                /*yellow, real time text */
+                if (isChecked4[i] === true) {
+                    $("#section4").show();
+                    sectionFourTrue.push(" " + nums4[i]);
+                    texta = sectionFourTrue.toString();
+                    textb = texta.lastIndexOf(",");
+
+                    if (textb > 0) {
+                        textc = texta.slice(textb, textb + nums4[i].length).replace(/,/, " & " + nums4[i]);
+                        texta = text + texta.slice(0, textb).concat(textc);
+                    } else if (textb < 0) {
+                        texta = "Please complete item: " + sectionFourTrue;
+                    }
+                    $("#yeah4").text(texta).css("background-color", "yellow");
+                    /*console.log(texta, textb, textc, isChecked[i]);*/
+                } else if (isChecked4[i] === false) {
+
+                    if (isChecked4[i - 1] === true || isChecked4[i - 2] === true || isChecked4[i - 3] === true || isChecked4[i - 4] === true || isChecked4[i - 5] === true || isChecked4[i - 6] === true || isChecked4[i - 7] === true || isChecked4[i - 8] === true || isChecked4[i - 9] === true) {
+                        $("#section4").show();
+                        $("#section5").hide();
+                    } else {
+                        $("#section4").hide();
+                        $("#section5").show();
+                    }
+                } /* END  yellow, real time text */
+
+
+
+
+                /* SOMEWHAT text admin page */
+
+                if (checked2_4[i] === true) {
+                    somewhatText4True.push(" " + behaviorText4[i]);
+                    somewhatA = somewhatText4True.toString();
+                    somewhatB = somewhatA.lastIndexOf(",");
+                    somewhatC = somewhatA.slice(somewhatB, somewhatB + behaviorText4[i].length + 3).replace(/,/, " and");
+                    somewhatA = somewhatText4 + somewhatA.slice(0, somewhatB).concat(somewhatC) + ".";
+
+                    $("#sec4Somewhat").text(somewhatText + somewhatA);
+                    /* console.log(somewhatA);*/
+                } /* END SOMEWHAT text admin page */
+
+
+                /* VERY MUCH LIKE text admin page */
+                else if (checked3_4[i] === true) {
+                    veryMuchLikeText4True.push(" " + behaviorText4[i]);
+                    veryMuchLikeA = veryMuchLikeText4True.toString();
+                    veryMuchLikeB = veryMuchLikeA.lastIndexOf(",");
+                    veryMuchLikeC = veryMuchLikeA.slice(veryMuchLikeB, veryMuchLikeB + behaviorText4[i].length + 3).replace(/,/, " and");
+                    veryMuchLikeA = veryMuchLikeText4 + veryMuchLikeA.slice(0, veryMuchLikeB).concat(veryMuchLikeC) + ".";
+                    $("#sec4VeryMuchLike").text(veryMuchLikeText + veryMuchLikeA);
+                }
+                /*console.log(veryMuchLikeC, veryMuchLikeB, veryMuchLikeA); */
+                /* END VERY MUCH LIKE text admin page */
+
+
+                /* RAW Score */
+                if (checked0_4[i] === true) {
+                    rawScore += 0;
+                } else if (checked1_4[i] === true) {
+                    rawScore += 1;
+                } else if (checked2_4[i] === true) {
+                    rawScore += 2;
+                } else if (checked3_4[i] === true) {
+                    rawScore += 3;
+                }
+
+                console.log(rawScore);
+                /* END RAW SCORE */
+
+
+            } /*END i for loop*/
+
+            /* Scaled Score */
+            if (rawScore == 0 || rawScore == 1) {
+                scaledScore4 = 2;
+            } else if (rawScore == 2 || rawScore == 3 || rawScore == 4) {
+                scaledScore4 = 3;
+            } else if (rawScore == 5 || rawScore == 6 || rawScore == 7 || rawScore == 8) {
+                scaledScore4 = 4;
+            } else if (rawScore == 9 || rawScore == 10 || rawScore == 11) {
+                scaledScore4 = 5;
+            } else if (rawScore == 12 || rawScore == 13) {
+                scaledScore4 = 6;
+            } else if (rawScore == 14 || rawScore == 15 || rawScore == 16) {
+                scaledScore4 = 7;
+            } else if (rawScore == 17 || rawScore == 18) {
+                scaledScore4 = 8;
+            } else if (rawScore == 19 || rawScore == 20 || rawScore == 21) {
+                scaledScore4 = 9;
+            } else if (rawScore == 22 || rawScore == 23) {
+                scaledScore4 = 10;
+            } else if (rawScore == 24 || rawScore == 25) {
+                scaledScore4 = 11;
+            } else if (rawScore == 26 || rawScore == 27) {
+                scaledScore4 = 12;
+            }
+
+
+
+            $("#sec4Score").text("Social Communication (Scaled Score of " + scaledScore4 + ")-");
+            console.log(rawScore, scaledScore4, sumSubScales);
+            /* END Scaled Score */
+
+            $('body').scrollTop(0);
+        }); /*END Section 4 */
+
+
+        /*Section 5 --- Emotional Responses --- */
+        $('#next5').click(function() {
+            var isChecked5 = [!$("input[name=37]").is(":checked"), !$("input[name=38]").is(":checked"), !$("input[name=39]").is(":checked"), !$("input[name=40]").is(":checked"),
+
+                !$("input[name=41]").is(":checked"), !$("input[name=42]").is(":checked"), !$("input[name=43]").is(":checked"), !$("input[name=44]").is(":checked"),
+                false
+            ];
+            var behaviorText5 = [
+                $("#37").text(),
+                $("#38").text(),
+                $("#39").text(),
+                $("#40").text(),
+
+                $("#41").text(),
+                $("#42").text(),
+                $("#43").text(),
+                $("#44").text()
+            ];
+            var nums5 = [
+                $("#num37").text(),
+                $("#num38").text(),
+                $("#num39").text(),
+                $("#num40").text(),
+
+                $("#num41").text(),
+                $("#num42").text(),
+                $("#num43").text(),
+                $("#num44").text()
+            ];
+
+            var checked0_5 = [
+                $("#37-0").is(":checked"),
+                $("#38-0").is(":checked"),
+                $("#39-0").is(":checked"),
+                $("#40-0").is(":checked"),
+
+                $("#41-0").is(":checked"),
+                $("#42-0").is(":checked"),
+                $("#43-0").is(":checked"),
+                $("#44-0").is(":checked")
+            ];
+            var checked1_5 = [
+                $("#37-1").is(":checked"),
+                $("#38-1").is(":checked"),
+                $("#39-1").is(":checked"),
+                $("#40-1").is(":checked"),
+
+                $("#41-1").is(":checked"),
+                $("#42-1").is(":checked"),
+                $("#43-1").is(":checked"),
+                $("#44-1").is(":checked")
+            ];
+            var checked2_5 = [
+                $("#37-2").is(":checked"),
+                $("#38-2").is(":checked"),
+                $("#39-2").is(":checked"),
+                $("#40-2").is(":checked"),
+
+                $("#41-2").is(":checked"),
+                $("#42-2").is(":checked"),
+                $("#43-2").is(":checked"),
+                $("#44-2").is(":checked")
+            ];
+            var checked3_5 = [
+                $("#37-3").is(":checked"),
+                $("#38-3").is(":checked"),
+                $("#39-3").is(":checked"),
+                $("#40-3").is(":checked"),
+
+                $("#41-3").is(":checked"),
+                $("#42-3").is(":checked"),
+                $("#43-3").is(":checked"),
+                $("#44-3").is(":checked")
+            ];
+
+            var i;
+            var rawScore = 0;
+            var text = "Please complete items: ";
+            var texta, textb, textc;
+
+            var somewhatText5 = [];
+            var somewhatText5True = [];
+            var somewhatA, somewhatB, somewhatC;
+
+            var veryMuchLikeText5 = [];
+            var veryMuchLikeText5True = [];
+            var veryMuchLikeA, veryMuchLikeB, veryMuchLikeC;
+
+
+            var sectionFiveTrue = [];
+
+
+
+
+
+            for (i = 0; i < isChecked5.length; i++) {
+
+
+                /*yellow, real time text */
+                if (isChecked5[i] === true) {
+                    $("#section5").show();
+                    sectionFiveTrue.push(" " + nums5[i]);
+                    texta = sectionFiveTrue.toString();
+                    textb = texta.lastIndexOf(",");
+
+                    if (textb > 0) {
+                        textc = texta.slice(textb, textb + nums5[i].length).replace(/,/, " & " + nums5[i]);
+                        texta = text + texta.slice(0, textb).concat(textc);
+                    } else if (textb < 0) {
+                        texta = "Please complete item: " + sectionFiveTrue;
+                    }
+                    $("#yeah5").text(texta).css("background-color", "yellow");
+                    /*console.log(texta, textb, textc, isChecked[i]);*/
+                } else if (isChecked5[i] === false) {
+
+                    if (isChecked5[i - 1] === true || isChecked5[i - 2] === true || isChecked5[i - 3] === true || isChecked5[i - 4] === true || isChecked5[i - 5] === true || isChecked5[i - 6] === true || isChecked5[i - 7] === true || isChecked5[i - 8] === true) {
+                        $("#section5").show();
+                        $("#section6").hide();
+                    } else {
+                        $("#section5").hide();
+                        $("#section6").show();
+                    }
+                } /* END  yellow, real time text */
+
+
+
+
+                /* SOMEWHAT text admin page */
+
+                if (checked2_5[i] === true) {
+                    somewhatText5True.push(" " + behaviorText5[i]);
+                    somewhatA = somewhatText5True.toString();
+                    somewhatB = somewhatA.lastIndexOf(",");
+                    somewhatC = somewhatA.slice(somewhatB, somewhatB + behaviorText5[i].length + 3).replace(/,/, " and");
+                    somewhatA = somewhatText5 + somewhatA.slice(0, somewhatB).concat(somewhatC) + ".";
+
+                    $("#sec5Somewhat").text(somewhatText + somewhatA);
+                    /* console.log(somewhatA);*/
+                } /* END SOMEWHAT text admin page */
+
+
+                /* VERY MUCH LIKE text admin page */
+                else if (checked3_5[i] === true) {
+                    veryMuchLikeText5True.push(" " + behaviorText5[i]);
+                    veryMuchLikeA = veryMuchLikeText5True.toString();
+                    veryMuchLikeB = veryMuchLikeA.lastIndexOf(",");
+                    veryMuchLikeC = veryMuchLikeA.slice(veryMuchLikeB, veryMuchLikeB + behaviorText5[i].length + 3).replace(/,/, " and");
+                    veryMuchLikeA = veryMuchLikeText5 + veryMuchLikeA.slice(0, veryMuchLikeB).concat(veryMuchLikeC) + ".";
+                    $("#sec5VeryMuchLike").text(veryMuchLikeText + veryMuchLikeA);
+                }
+                /*console.log(veryMuchLikeC, veryMuchLikeB, veryMuchLikeA); */
+                /* END VERY MUCH LIKE text admin page */
+
+
+                /* RAW Score */
+                if (checked0_5[i] === true) {
+                    rawScore += 0;
+                } else if (checked1_5[i] === true) {
+                    rawScore += 1;
+                } else if (checked2_5[i] === true) {
+                    rawScore += 2;
+                } else if (checked3_5[i] === true) {
+                    rawScore += 3;
+                }
+
+                console.log(rawScore);
+                /* END RAW SCORE */
+
+
+            } /*END i for loop*/
+
+            /* Scaled Score */
+            if (rawScore == 0 || rawScore == 1) {
+                scaledScore5 = 3;
+            } else if (rawScore == 2 || rawScore == 3 || rawScore == 4) {
+                scaledScore5 = 4;
+            } else if (rawScore == 5 || rawScore == 6) {
+                scaledScore5 = 5;
+            } else if (rawScore == 7 || rawScore == 8) {
+                scaledScore5 = 6;
+            } else if (rawScore == 9 || rawScore == 10) {
+                scaledScore5 = 7;
+            } else if (rawScore == 11 || rawScore == 12) {
+                scaledScore5 = 8;
+            } else if (rawScore == 13 || rawScore == 14) {
+                scaledScore5 = 9;
+            } else if (rawScore == 15 || rawScore == 16) {
+                scaledScore5 = 10;
+            } else if (rawScore == 18 || rawScore == 17) {
+                scaledScore5 = 11;
+            } else if (rawScore == 19 || rawScore == 20) {
+                scaledScore5 = 12;
+            } else if (rawScore == 21 || rawScore == 22) {
+                scaledScore5 = 13;
+            } else if (rawScore == 23 || rawScore == 24) {
+                scaledScore5 = 14;
+            }
+
+            $("#sec5Score").text("Emotional Responses (Scaled Score of " + scaledScore5 + ")-");
+            console.log(rawScore, scaledScore5, sumSubScales);
+            /* END Scaled Score */
+            $('body').scrollTop(0);
+        }); /*END Section 5 */
+
+
+        /*Section 6 --- Cognitive Style --- */
+        $("#next6").click(function() {
+
+            var isChecked6 = [!$("input[name=45]").is(":checked"),
+
+                !$("input[name=46]").is(":checked"), !$("input[name=47]").is(":checked"), !$("input[name=48]").is(":checked"), !$("input[name=49]").is(":checked"), !$("input[name=50]").is(":checked"),
+
+                !$("input[name=51]").is(":checked"),
+                false
+            ];
+            var behaviorText6 = [
+                $("#45").text(),
+
+                $("#46").text(),
+                $("#47").text(),
+                $("#48").text(),
+                $("#49").text(),
+                $("#50").text(),
+
+                $("#51").text()
+            ];
+            var nums6 = [
+                $("#num45").text(),
+
+                $("#num46").text(),
+                $("#num47").text(),
+                $("#num48").text(),
+                $("#num49").text(),
+                $("#num50").text(),
+
+                $("#num51").text()
+            ];
+
+            var checked0_6 = [
+                $("#45-0").is(":checked"),
+
+                $("#46-0").is(":checked"),
+                $("#47-0").is(":checked"),
+                $("#48-0").is(":checked"),
+                $("#49-0").is(":checked"),
+                $("#50-0").is(":checked"),
+
+                $("#51-0").is(":checked")
+            ];
+            var checked1_6 = [
+                $("#45-1").is(":checked"),
+
+                $("#46-1").is(":checked"),
+                $("#47-1").is(":checked"),
+                $("#48-1").is(":checked"),
+                $("#49-1").is(":checked"),
+                $("#50-1").is(":checked"),
+
+                $("#51-1").is(":checked")
+            ];
+            var checked2_6 = [
+                $("#45-2").is(":checked"),
+
+                $("#46-2").is(":checked"),
+                $("#47-2").is(":checked"),
+                $("#48-2").is(":checked"),
+                $("#49-2").is(":checked"),
+                $("#50-2").is(":checked"),
+
+                $("#51-2").is(":checked")
+            ];
+            var checked3_6 = [
+                $("#45-3").is(":checked"),
+
+                $("#46-3").is(":checked"),
+                $("#47-3").is(":checked"),
+                $("#48-3").is(":checked"),
+                $("#49-3").is(":checked"),
+                $("#50-3").is(":checked"),
+
+                $("#51-3").is(":checked")
+            ];
+
+            var i;
+            var rawScore = 0;
+            var text = "Please complete items: ";
+            var texta, textb, textc;
+
+            var somewhatText6 = [];
+            var somewhatText6True = [];
+            var somewhatA, somewhatB, somewhatC;
+
+            var veryMuchLikeText6 = [];
+            var veryMuchLikeText6True = [];
+            var veryMuchLikeA, veryMuchLikeB, veryMuchLikeC;
+
+
+            var sectionSixTrue = [];
+
+
+
+
+
+            for (i = 0; i < isChecked6.length; i++) {
+
+
+                /*yellow, real time text */
+                if (isChecked6[i] === true) {
+                    $("#section6").show();
+                    sectionSixTrue.push(" " + nums6[i]);
+                    texta = sectionSixTrue.toString();
+                    textb = texta.lastIndexOf(",");
+
+                    if (textb > 0) {
+                        textc = texta.slice(textb, textb + nums6[i].length).replace(/,/, " & " + nums6[i]);
+                        texta = text + texta.slice(0, textb).concat(textc);
+                    } else if (textb < 0) {
+                        texta = "Please complete item: " + sectionSixTrue;
+                    }
+                    $("#yeah6").text(texta).css("background-color", "yellow");
+                    /*console.log(texta, textb, textc, isChecked[i]);*/
+                } else if (isChecked6[i] === false) {
+
+                    if (isChecked6[i - 1] === true || isChecked6[i - 2] === true || isChecked6[i - 3] === true || isChecked6[i - 4] === true || isChecked6[i - 5] === true || isChecked6[i - 6] === true || isChecked6[i - 7] === true) {
+                        $("#section6").show();
+                        $("#section7").hide();
+                    } else {
+                        $("#section6").hide();
+                        $("#section7").show();
+                    }
+                } /* END  yellow, real time text */
+
+
+
+
+                /* SOMEWHAT text admin page */
+
+                if (checked2_6[i] === true) {
+                    somewhatText6True.push(" " + behaviorText6[i]);
+                    somewhatA = somewhatText6True.toString();
+                    somewhatB = somewhatA.lastIndexOf(",");
+                    somewhatC = somewhatA.slice(somewhatB, somewhatB + behaviorText6[i].length + 3).replace(/,/, " and");
+                    somewhatA = somewhatText6 + somewhatA.slice(0, somewhatB).concat(somewhatC) + ".";
+
+                    $("#sec6Somewhat").text(somewhatText + somewhatA);
+                    /* console.log(somewhatA);*/
+                } /* END SOMEWHAT text admin page */
+
+
+                /* VERY MUCH LIKE text admin page */
+                else if (checked3_6[i] === true) {
+                    veryMuchLikeText6True.push(" " + behaviorText6[i]);
+                    veryMuchLikeA = veryMuchLikeText6True.toString();
+                    veryMuchLikeB = veryMuchLikeA.lastIndexOf(",");
+                    veryMuchLikeC = veryMuchLikeA.slice(veryMuchLikeB, veryMuchLikeB + behaviorText6[i].length + 3).replace(/,/, " and");
+                    veryMuchLikeA = veryMuchLikeText6 + veryMuchLikeA.slice(0, veryMuchLikeB).concat(veryMuchLikeC) + ".";
+                    $("#sec6VeryMuchLike").text(veryMuchLikeText + veryMuchLikeA);
+                }
+                /*console.log(veryMuchLikeC, veryMuchLikeB, veryMuchLikeA); */
+                /* END VERY MUCH LIKE text admin page */
+
+
+                /* RAW Score */
+                if (checked0_6[i] === true) {
+                    rawScore += 0;
+                } else if (checked1_6[i] === true) {
+                    rawScore += 1;
+                } else if (checked2_6[i] === true) {
+                    rawScore += 2;
+                } else if (checked3_6[i] === true) {
+                    rawScore += 3;
+                }
+
+                console.log(rawScore);
+                /* END RAW SCORE */
+
+
+            } /*END i for loop*/
+
+            /* Scaled Score */
+            if (rawScore == 0) {
+                scaledScore6 = 5;
+            } else if (rawScore == 1) {
+                scaledScore6 = 6;
+            } else if (rawScore == 2 || rawScore == 3) {
+                scaledScore6 = 7;
+            } else if (rawScore == 4 || rawScore == 5 || rawScore == 6) {
+                scaledScore6 = 8;
+            } else if (rawScore == 7 || rawScore == 8) {
+                scaledScore6 = 9;
+            } else if (rawScore == 9 || rawScore == 10) {
+                scaledScore6 = 10;
+            } else if (rawScore == 11 || rawScore == 12 || rawScore == 13) {
+                scaledScore6 = 11;
+            } else if (rawScore == 14 || rawScore == 15) {
+                scaledScore6 = 12;
+            } else if (rawScore == 16) {
+                scaledScore6 = 13;
+            } else if (rawScore == 17 || rawScore == 18) {
+                scaledScore6 = 14;
+            } else if (rawScore == 19 || rawScore == 20) {
+                scaledScore6 = 13;
+            } else if (rawScore == 21) {
+                scaledScore6 = 14;
+            }
+
+
+            $("#sec6Score").text("Cognitive Style (Scaled Score of " + scaledScore6 + ")-");
+            console.log(rawScore, scaledScore6, sumSubScales);
+            /* END Scaled Score */
+            $('body').scrollTop(0);
+        }); /*END Section 6 */
+
+
+        /*Section 7 --- Maladaptive Speech --- */
+        $("#submit").click(function() {
+            var isChecked7 = [!$("input[name=52]").is(":checked"), !$("input[name=53]").is(":checked"), !$("input[name=54]").is(":checked"), !$("input[name=55]").is(":checked"),
+
+                !$("input[name=56]").is(":checked"), !$("input[name=57]").is(":checked"), !$("input[name=58]").is(":checked"),
+                false
+            ];
+            var behaviorText7 = [
+                $("#52").text(),
+                $("#53").text(),
+                $("#54").text(),
+                $("#55").text(),
+
+                $("#56").text(),
+                $("#57").text(),
+                $("#58").text()
+            ];
+            var nums7 = [
+                $("#num52").text(),
+                $("#num53").text(),
+                $("#num54").text(),
+                $("#num55").text(),
+
+                $("#num56").text(),
+                $("#num57").text(),
+                $("#num58").text()
+            ];
+
+            var checked0_7 = [
+                $("#52-0").is(":checked"),
+                $("#53-0").is(":checked"),
+                $("#54-0").is(":checked"),
+                $("#55-0").is(":checked"),
+
+                $("#56-0").is(":checked"),
+                $("#57-0").is(":checked"),
+                $("#58-0").is(":checked")
+            ];
+            var checked1_7 = [
+                $("#52-1").is(":checked"),
+                $("#53-1").is(":checked"),
+                $("#54-1").is(":checked"),
+                $("#55-1").is(":checked"),
+
+                $("#56-1").is(":checked"),
+                $("#57-1").is(":checked"),
+                $("#58-1").is(":checked")
+            ];
+            var checked2_7 = [
+                $("#52-2").is(":checked"),
+                $("#53-2").is(":checked"),
+                $("#54-2").is(":checked"),
+                $("#55-2").is(":checked"),
+
+                $("#56-2").is(":checked"),
+                $("#57-2").is(":checked"),
+                $("#58-2").is(":checked")
+
+            ];
+            var checked3_7 = [
+                $("#52-3").is(":checked"),
+                $("#53-3").is(":checked"),
+                $("#54-3").is(":checked"),
+                $("#55-3").is(":checked"),
+
+                $("#56-3").is(":checked"),
+                $("#57-3").is(":checked"),
+                $("#58-3").is(":checked")
+            ];
+
+            var i;
+            var rawScore = 0;
+            var text = "Please complete items: ";
+            var texta, textb, textc;
+
+            var somewhatText7 = [];
+            var somewhatText7True = [];
+            var somewhatA, somewhatB, somewhatC;
+
+            var veryMuchLikeText7 = [];
+            var veryMuchLikeText7True = [];
+            var veryMuchLikeA, veryMuchLikeB, veryMuchLikeC;
+
+            var sectionSevenTrue = [];
+
+
+
+
+
+            for (i = 0; i < isChecked7.length; i++) {
+
+
+                /*yellow, real time text */
+                if (isChecked7[i] === true) {
+                    $("#section7").show();
+                    sectionSevenTrue.push(" " + nums7[i]);
+                    texta = sectionSevenTrue.toString();
+                    textb = texta.lastIndexOf(",");
+
+                    if (textb > 0) {
+                        textc = texta.slice(textb, textb + nums7[i].length).replace(/,/, " & " + nums7[i]);
+                        texta = text + texta.slice(0, textb).concat(textc);
+                    } else if (textb < 0) {
+                        texta = "Please complete item: " + sectionSevenTrue;
+                    }
+                    $("#yeah7").text(texta).css("background-color", "yellow");
+                    /*console.log(texta, textb, textc, isChecked[i]);*/
+                } else if (isChecked7[i] === false) {
+
+                    if (isChecked7[i - 1] === true || isChecked7[i - 2] === true || isChecked7[i - 3] === true || isChecked7[i - 4] === true || isChecked7[i - 5] === true || isChecked7[i - 6] === true || isChecked7[i - 7] === true) {
+                        $("#section7").show();
+                        $("#complete").hide();
+                    } else {
+                        $("#section7").hide();
+                        $("#complete").show();
+                    }
+                } /* END  yellow, real time text */
+
+
+
+
+                /* SOMEWHAT text admin page */
+
+                if (checked2_7[i] === true) {
+                    somewhatText7True.push(" " + behaviorText7[i]);
+                    somewhatA = somewhatText7True.toString();
+                    somewhatB = somewhatA.lastIndexOf(",");
+                    somewhatC = somewhatA.slice(somewhatB, somewhatB + behaviorText7[i].length + 3).replace(/,/, " and");
+                    somewhatA = somewhatText7 + somewhatA.slice(0, somewhatB).concat(somewhatC) + ".";
+
+                    $("#sec7Somewhat").text(somewhatText + somewhatA);
+                    /* console.log(somewhatA);*/
+                } /* END SOMEWHAT text admin page */
+
+
+                /* VERY MUCH LIKE text admin page */
+                else if (checked3_7[i] === true) {
+                    veryMuchLikeText7True.push(" " + behaviorText7[i]);
+                    veryMuchLikeA = veryMuchLikeText7True.toString();
+                    veryMuchLikeB = veryMuchLikeA.lastIndexOf(",");
+                    veryMuchLikeC = veryMuchLikeA.slice(veryMuchLikeB, veryMuchLikeB + behaviorText7[i].length + 3).replace(/,/, " and");
+                    veryMuchLikeA = veryMuchLikeText7 + veryMuchLikeA.slice(0, veryMuchLikeB).concat(veryMuchLikeC) + ".";
+                    $("#sec7VeryMuchLike").text(veryMuchLikeText + veryMuchLikeA);
+                }
+                /*console.log(veryMuchLikeC, veryMuchLikeB, veryMuchLikeA); */
+                /* END VERY MUCH LIKE text admin page */
+
+
+                /* RAW Score */
+                if (checked0_7[i] === true) {
+                    rawScore += 0;
+                } else if (checked1_7[i] === true) {
+                    rawScore += 1;
+                } else if (checked2_7[i] === true) {
+                    rawScore += 2;
+                } else if (checked3_7[i] === true) {
+                    rawScore += 3;
+                }
+
+                console.log(rawScore);
+                /* END RAW SCORE */
+
+
+            } /*END i for loop*/
+
+            /* Scaled Score */
+            if (rawScore == 0) {
+                scaledScore7 = 5;
+            } else if (rawScore == 1 || rawScore == 2) {
+                scaledScore7 = 6;
+            } else if (rawScore == 3 || rawScore == 4) {
+                scaledScore7 = 7;
+            } else if (rawScore == 5) {
+                scaledScore7 = 8;
+            } else if (rawScore == 6 || rawScore == 7) {
+                scaledScore7 = 9;
+            } else if (rawScore == 8 || rawScore == 9) {
+                scaledScore7 = 10;
+            } else if (rawScore == 10 || rawScore == 11) {
+                scaledScore7 = 11;
+            } else if (rawScore == 12 || rawScore == 13) {
+                scaledScore7 = 12;
+            } else if (rawScore == 14 || rawScore == 15) {
+                scaledScore7 = 13;
+            } else if (rawScore == 16) {
+                scaledScore7 = 14;
+            } else if (rawScore == 17 || rawScore == 18) {
+                scaledScore7 = 15;
+            } else if (rawScore == 19 || rawScore == 20) {
+                scaledScore7 = 16;
+            } else if (rawScore == 21) {
+                scaledScore7 = 17;
+            }
+
+
+            $("#sec7Score").text("Maladaptive Speech (Scaled Score of " + scaledScore7 + ")-");
+            console.log(rawScore, scaledScore7, sumSubScales);
+            /* END Scaled Score */
+            $('body').scrollTop(0);
+
+        }); /*END Section 7*/
+
+
+        /*Home Button */
+        $("#home").click(function() {
+            $("#section1").show();
+
+            $("#section2").hide();
+            $("#section3").hide();
+            $("#section4").hide();
+            $("#section5").hide();
+            $("#section6").hide();
+            $("#section7").hide();
+            $("#adminSection").hide();
+            $("#complete").hide();
+
+            $('body').scrollTop(0);
+
+        }); /* END home button */
+
+
+        /*Admin Button */
+        $("#admin").click(function() {
+
+
+
+
+
+
+
+            var psw = prompt("Please enter password: (1234)");
+            var probability;
+            sumSubScales = scaledScore2 + scaledScore3 + scaledScore4 + scaledScore5 + scaledScore6 + scaledScore7;
+            console.log(sumSubScales);
+
+            switch (sumSubScales) {
+                case sumSubScales = 87:
+                    autismIndex = 140;
+                    break;
+
+                case sumSubScales = 86:
+                    autismIndex = 139;
+                    break;
+
+                case sumSubScales = 85:
+                    autismIndex = 137;
+                    break;
+
+                case sumSubScales = 84:
+                    autismIndex = 136;
+                    break;
+
+                case sumSubScales = 83:
+                    autismIndex = 134;
+                    break;
+
+                case sumSubScales = 82:
+                    autismIndex = 133;
+                    break;
+
+                case sumSubScales = 81:
+                    autismIndex = 131;
+                    break;
+
+                case sumSubScales = 80:
+                    autismIndex = 130;
+                    break;
+
+                case sumSubScales = 79:
+                    autismIndex = 128;
+                    break;
+
+                case sumSubScales = 78:
+                    autismIndex = 127;
+                    break;
+
+
+                case sumSubScales = 77:
+                    autismIndex = 125;
+                    break;
+                case sumSubScales = 76:
+                    autismIndex = 124;
+                    break;
+
+
+                case sumSubScales = 75:
+                    autismIndex = 120;
+                    break;
+                case sumSubScales = 74:
+                    autismIndex = 121;
+                    break;
+                case sumSubScales = 73:
+                    autismIndex = 120;
+                    break;
+
+
+                case sumSubScales = 72:
+                    autismIndex = 118;
+                    break;
+                case sumSubScales = 71:
+                    autismIndex = 117;
+                    break;
+
+
+                case sumSubScales = 70:
+                    autismIndex = 115;
+                    break;
+                case sumSubScales = 69:
+                    autismIndex = 114;
+                    break;
+                case sumSubScales = 68:
+                    autismIndex = 112;
+                    break;
+                case sumSubScales = 67:
+                    autismIndex = 111;
+                    break;
+                case sumSubScales = 66:
+                    autismIndex = 109;
+                    break;
+                case sumSubScales = 65:
+                    autismIndex = 108;
+                    break;
+
+
+
+                case sumSubScales = 64:
+                    autismIndex = 106;
+                    break;
+                case sumSubScales = 63:
+                    autismIndex = 105;
+                    break;
+
+
+                case sumSubScales = 62:
+                    autismIndex = 103;
+                    break;
+                case sumSubScales = 61:
+                    autismIndex = 102;
+                    break;
+                case sumSubScales = 60:
+                    autismIndex = 100;
+                    break;
+                case sumSubScales = 59:
+                    autismIndex = 99;
+                    break;
+                case sumSubScales = 58:
+                    autismIndex = 97;
+                    break;
+                case sumSubScales = 57:
+                    autismIndex = 96;
+                    break;
+
+
+                case sumSubScales = 56:
+                    autismIndex = 94;
+                    break;
+                case sumSubScales = 55:
+                    autismIndex = 93;
+                    break;
+                case sumSubScales = 54:
+                    autismIndex = 92;
+                    break;
+                case sumSubScales = 53:
+                    autismIndex = 90;
+                    break;
+                case sumSubScales = 52:
+                    autismIndex = 89;
+                    break;
+
+
+                case sumSubScales = 51:
+                    autismIndex = 87;
+                    break;
+                case sumSubScales = 50:
+                    autismIndex = 86;
+                    break;
+
+
+                case sumSubScales = 49:
+                    autismIndex = 84;
+                    break;
+                case sumSubScales = 48:
+                    autismIndex = 83;
+                    break;
+                case sumSubScales = 47:
+                    autismIndex = 81;
+                    break;
+                case sumSubScales = 46:
+                    autismIndex = 80;
+                    break;
+
+
+                case sumSubScales = 45:
+                    autismIndex = 78;
+                    break;
+                case sumSubScales = 44:
+                    autismIndex = 77;
+                    break;
+
+
+                case sumSubScales = 43:
+                    autismIndex = 75;
+                    break;
+                case sumSubScales = 42:
+                    autismIndex = 74;
+                    break;
+
+
+                case sumSubScales = 41:
+                    autismIndex = 72;
+                    break;
+                case sumSubScales = 40:
+                    autismIndex = 71;
+                    break;
+                case sumSubScales = 39:
+                    autismIndex = 69;
+                    break;
+                case sumSubScales = 38:
+                    autismIndex = 68;
+                    break;
+
+
+
+                case sumSubScales = 37:
+                    autismIndex = 66;
+                    break;
+                case sumSubScales = 36:
+                    autismIndex = 65;
+                    break;
+
+
+
+                case sumSubScales = 35:
+                    autismIndex = 63;
+                    break;
+                case sumSubScales = 34:
+                    autismIndex = 62;
+                    break;
+                case sumSubScales = 33:
+                    autismIndex = 61;
+                    break;
+
+
+
+                case sumSubScales = 32:
+                    autismIndex = 59;
+                    break;
+                case sumSubScales = 31:
+                    autismIndex = 58;
+                    break;
+
+
+
+                case sumSubScales = 30:
+                    autismIndex = 56;
+                    break;
+                case sumSubScales = 29:
+                    autismIndex = 55;
+                    break;
+                case sumSubScales = 28:
+                    autismIndex = 53;
+                    break;
+                case sumSubScales = 27:
+                    autismIndex = 52;
+                    break;
+                case sumSubScales = 26:
+                    autismIndex = 50;
+                    break;
+                case sumSubScales = 25:
+                    autismIndex = 49;
+                    break;
+                case sumSubScales = 24:
+                    autismIndex = 47;
+                    break;
+                case sumSubScales = 23:
+                    autismIndex = 46;
+                    break;
+                case sumSubScales = 22:
+                    autismIndex = 44;
+                    break;
+                case sumSubScales = 21:
+                    autismIndex = 43;
+                    break;
+
+            }
+
+            if (autismIndex < 55) {
+                probability = "an UNLIKELY (not ASD)";
+            } else if (autismIndex > 54 && autismIndex < 71) {
+                probability = "a PROBABLE (minimal support required)";
+            } else if (autismIndex > 70 && autismIndex < 101) {
+                probability = "a VERY LIKELY (requiring substantial support)";
+            } else if (autismIndex > 100) {
+                probability = "a VERY LIKELY (requiring very substantial support)";
+            }
+            /*console.log(autismIndex); */
+            $("#autismQuotient").text(studentFirstName + "'s Autism Quotient according to the responses from " + respondentName + " is " + autismIndex + " which indicates " + probability + " probabiliity of autism.");
+
+
+            if (psw === "1234") {
+                $("#adminSection").show();
+                $("#section1").hide();
+            } else {
+
+                window.alert("Incorrect Password");
+                $("#section1").show();
+            }
+
+            $("#section2").hide();
+            $("#section3").hide();
+            $("#section4").hide();
+            $("#section5").hide();
+            $("#section6").hide();
+            $("#section7").hide();
+            $("#complete").hide();
+        });
+
+
+
+
+    }); /*END jquery */
+</script>

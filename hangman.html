@@ -13,6 +13,8 @@
     <!-- viewport -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- Font awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Risque|Lato">
+    <!--Google fonts-->
 </head>
 <!-- background -->
 <div class="background fluid-container">
@@ -21,61 +23,19 @@
 
         <div class="header">
             <h1>Hangman</h1>
+            <div class="line"></div>
             <h3 style="text-align:center">Cine Edition</h3>
         </div>
         <!-- END header -->
-        <div id="letter-box">
-            <!-- top box -->
-            <ul class="list-inline">
-                <button id="q" class="letter"></button>
-                <button id="w" class="letter"></button>
-                <button id="e" class="letter"></button>
-                <button id="r" class="letter"></button>
-                <button id="t" class="letter"></button>
-                <button id="y" class="letter"></button>
 
-                <button id="u" class="letter"></button>
-                <button id="i" class="letter"></button>
-                <button id="o" class="letter"></button>
-                <button id="p" class="letter"></button>
-            </ul>
 
-            <ul class="list-inline">
-                <button id="a" class="letter"></button>
-                <button id="s" class="letter"></button>
-                <button id="d" class="letter"></button>
-                <button id="f" class="letter"></button>
 
-                <button id="g" class="letter"></button>
-                <button id="h" class="letter"></button>
-
-                <button id="j" class="letter"></button>
-                <button id="k" class="letter"></button>
-                <button id="l" class="letter"></button>
-            </ul>
-
-            <ul class="list-inline">
-                <button id="z" class="letter"></button>
-                <button id="x" class="letter"></button>
-                <button id="c" class="letter"></button>
-                <button id="v" class="letter"></button>
-
-                <button id="b" class="letter"></button>
-                <button id="n" class="letter"></button>
-                <button id="m" class="letter"></button>
-            </ul>
-            <h3 id="hint" style="text-align:center">Hint: </h3>
-            <ul class="list-inline">
-                <button id="reset" class="btn btn-primary">Reset</button>
-                <button id="hint-btn" class="btn btn-primary">Hint</button>
-            </ul>
-        </div>
-        <!-- END top box -->
-
-        <div id="hang" class="box">
-            <!--bottom box -->
+        <div class="box">
             <h3 id="solution" style="text-align: center">Solution: </h3>
-            <div class="hang-box"><svg height="250" width="175">
+            <div class="row">
+                <div id="hang" class="col-md-3">
+                    <!--bottom box -->
+                    <div class="hang-box"><svg height="250" width="175">
                <!--hang box -->     
                     <circle id="head" cx="25" cy="50" r="23.5"/>      
                     <line id="torso" x1="25" y1="75" x2="25" y2="135"/>              
@@ -98,11 +58,75 @@
                     <line id="rope3" x1="35" y1="225" x2="155" y2="225"/>
                     
                   </svg></div>
-            <!--END hang box -->
+                    <!--END hang box -->
+                </div>
+                <!--END bottom box -->
+
+
+                <div id="letter-box" class="col-md-6">
+                    <!-- top box -->
+
+                    <ul class="list-inline">
+                        <button id="q" class="letter"></button>
+                        <button id="w" class="letter"></button>
+                        <button id="e" class="letter"></button>
+                        <button id="r" class="letter"></button>
+                        <button id="t" class="letter"></button>
+                        <button id="y" class="letter"></button>
+
+                        <button id="u" class="letter"></button>
+                        <button id="i" class="letter"></button>
+                        <button id="o" class="letter"></button>
+                        <button id="p" class="letter"></button>
+                    </ul>
+
+                    <ul class="list-inline">
+                        <button id="a" class="letter"></button>
+                        <button id="s" class="letter"></button>
+                        <button id="d" class="letter"></button>
+                        <button id="f" class="letter"></button>
+
+                        <button id="g" class="letter"></button>
+                        <button id="h" class="letter"></button>
+
+                        <button id="j" class="letter"></button>
+                        <button id="k" class="letter"></button>
+                        <button id="l" class="letter"></button>
+                    </ul>
+
+                    <ul class="list-inline">
+                        <button id="z" class="letter"></button>
+                        <button id="x" class="letter"></button>
+                        <button id="c" class="letter"></button>
+                        <button id="v" class="letter"></button>
+
+                        <button id="b" class="letter"></button>
+                        <button id="n" class="letter"></button>
+                        <button id="m" class="letter"></button>
+                    </ul>
+
+                    <ul class="list-inline">
+                        <button id="reset" class="btn btn-primary">Reset</button>
+                        <button id="hint-btn" class="btn btn-primary">Hint</button>
+                    </ul>
+                </div>
+                <!-- END letter box -->
+
+
+            </div>
+            <!-- END row -->
+            <h2 id="hint" style="text-align:center">Hint: </h2>
         </div>
-        <!--END bottom box -->
+        <!-- END row -->
+
     </div>
     <!--END game box -->
+
+    <!-- Footer -->
+    <div class="fluid-container footer">
+        <a href="https://run.plnkr.co/plunks/urUjnN/"><button id="portfolio" type="button" class="btn">Portfolio</button></a>
+    </div>
+    <!-- END footer -->
 </div>
 <!--END background -->
 
@@ -127,17 +151,56 @@
         border-radius: 15px;
     }
     
-    .pop-up-btn {
-        background-color: #c6bcb6;
-        color: #96897f;
-        padding: 2% 20%;
-        border-radius: 4px;
-        text-align: center;
-        line-height: 1.8;
+    .footer {
+        background-color: #96897f;
+        color: #e0e2e4;
+        margin: auto;
+        padding: 1.15% 0%;
+        border-radius: 15px;
+        width: 200px;
         align-self: center;
     }
     
-    .background {
+    .swal-title {
+        font-size: 45px;
+        font-family: Risque;
+    }
+    
+    .swal-footer {
+        border-top: 2px solid #96897f;
+        margin: 5% 35%;
+    }
+    
+    .swal-text {
+        font-size: 30px;
+        font-family: Lato;
+        text-align: center;
+    }
+    
+    .swal-button {
+        background-color: #c6bcb6;
+        color: #96897f;
+        font-size: 18px;
+        font-family: Lato;
+        border-radius: 4px;
+        padding: 3% 15%;
+        margin: 2% 12%;
+    }
+    
+    #portfolio {
+        background-color: #c6bcb6;
+        color: #96897f;
+        font-size: 16px;
+        font-family: Lato;
+        border-radius: 4px;
+        width: 100px;
+        margin: 5px 50px;
+        /*padding: 3% 5%;
+        margin: 2% 0%;
+        align-content: center;*/
+    }
+    
+    body {
         background-color: #e0e2e4;
         padding: 0.5% 10% 0.5%;
     }
@@ -145,7 +208,7 @@
     .game-box {
         background-color: #c6bcb6;
         color: #625750;
-        margin: 0% 3% 3%;
+        margin: 1.5% 10% 2%;
         padding: 1% 3.5% 3.5%;
         border-radius: 15px;
         text-align: center;
@@ -155,19 +218,31 @@
     .hang-box {
         background-color: #96897f;
         color: #625750;
-        margin: 0% 20% 3%;
-        padding: 4% 24% 0%;
+        margin: 15% 0% 2% 30%;
+        padding: 2% 45% 0%;
         border-radius: 15px;
         line-height: 2;
+    }
+    
+    .line {
+        border-top: 2px solid #625750;
+        margin: 2% 48% 0%;
     }
     
     #letter-box {
         background-color: #96897f;
         color: #625750;
-        margin: 0% 10% 2%;
-        padding: 2% 3% 1%;
+        margin: 0% 0% 2% 18%;
+        padding: 5% 0% 1.5%;
         border-radius: 15px;
         line-height: 2;
+        font-family: Risque;
+        font-size: 120%;
+    }
+    
+    #hint {
+        margin: 2% 0% 0%;
+        font-size: 1.75vw
     }
     
     #hint-btn,
@@ -178,7 +253,7 @@
         border-radius: 5px;
         border-width: 50%;
         font-size: 120%;
-        font-family: Brandon Grotesque;
+        font-family: Lato;
         padding: 0.5% 1.5%;
         margin: 1% 1.5% 0%;
     }
@@ -186,8 +261,8 @@
     .box {
         background-color: #96897f;
         color: #625750;
-        padding: 2% 5% 1%;
-        margin: 0.5% 3% 0%;
+        padding: 2% 1% 1%;
+        margin: 0.5% 1% 0%;
         border-radius: 15px;
         line-height: 2;
     }
@@ -201,16 +276,21 @@
         text-align: center;
         line-height: 2.5;
         width: 7%;
-        border-color: #c6bcb6;
-        border-style: solid;
-        border-width: 1.5px;
+        border: 1.5px solid #c6bcb6;
     }
     
+    #portfolio:hover,
     .letter:hover,
-    .letter:off {
+    #reset:hover,
+    #hint-btn:hover {
         background-color: #c6bcb6;
         color: #625750;
-        border-color: #96897f;
+        border: 1.5px solid #625750;
+    }
+    
+    .swal-button:hover {
+        background-color: #625750;
+        color: #e0e2e4;
     }
     
     #right-arm,
@@ -235,26 +315,32 @@
     
     h1,
     h2 {
-        font-family: Trebuche MS;
+        font-family: Risque;
         text-align: center;
     }
     /* major headings */
     
     h3 {
-        font-family: Brandon Grotesque;
+        font-family: Lato;
         text-align: left;
+        font-size: 220%;
+    }
+    
+    #hint {
+        font-size: 200%;
+        margin: 0% 0% 2%;
     }
     
     h4,
     h5,
     h6 {
-        font-family: Brandon Grotesque;
+        font-family: Lato;
         text-align: left;
     }
     /* minor headings */
     
     p {
-        font-family: Merriweather;
+        font-family: Lato;
         text-align: left;
     }
     /* regular ol' text*/
@@ -413,7 +499,7 @@
             hint: "stop-motion company based in Portland"
         }, {
             solution: "Nicole Kidman",
-            hint: "actress, has worded with everyone from Lars von Trier to John Cameron Mitchell to Yorgos Lanthimos"
+            hint: "actress, has worked with everyone from Lars von Trier to John Cameron Mitchell to Yorgos Lanthimos"
         }];
 
         /*END variables*/
@@ -527,27 +613,34 @@
             })
         }
 
+        function lose() {
+            swal({
+                title: "You Lose!",
+                text: "Get back on that couch and watch more movies!!!",
+                className: "pop-up",
+                closeOnClickOutside: false,
+                button: {
+                    text: "Replay",
+                    visible: true,
+                    className: "pop-up-btn",
+                    value: true
+                }
+            }).then(replay => {
+                location.reload(true);
+
+            });
+        };
+
         function count() {
             if (misses.length > 6) {
+
                 $("#hint-btn").hide();
                 $("#solution").text("Solution: " + currentWord);
                 $("#hint").show();
                 $("#hint").text("Hint: " + wordBank[zt].hint);
-                swal({
-                    title: "You Lose!",
-                    text: "Get back on that couch and watch more movies!!!",
-                    className: "pop-up",
-                    closeOnClickOutside: false,
-                    button: {
-                        text: "Replay",
-                        visible: true,
-                        className: "pop-up-btn",
-                        value: true
-                    }
-                }).then(replay => {
-                    location.reload(true);
+                setTimeout(lose, 2000);
 
-                });
+
             }
         } /*END function count */
 
@@ -603,7 +696,7 @@
                 if (solution.includes("__") == false) {
                     swal({
                         title: "You Win!",
-                        text: "Congratuwelldone!!!",
+                        text: "Congratu-well-done!!!",
                         className: "pop-up",
                         closeOnClickOutside: true,
                         button: {
@@ -628,7 +721,8 @@
             }
 
             $("#solution").text("Solution: " + solution.join(" "));
-            win();
+            var interval = setTimeout(win, 2000);
+
         } /*END function right */
 
         function rightWrong() {
