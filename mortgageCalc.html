@@ -1,0 +1,506 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- jquery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- bootstrap -->
+    <meta charset="UTF-8">
+    <!-- unicode -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- viewport -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya|Raleway">
+    <!--Google fonts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<div class='lavender-background fluid-container'>
+
+    <!-- Header -->
+    <div class='fluid-container header'>
+        <div class="btn-group" role="group">
+            <a href="https://run.plnkr.co/plunks/urUjnN/"><button type="button" id="portfolio" class="btn btn-secondary"> Portfolio </button></a>
+        </div>
+    </div>
+    <!-- END header -->
+
+
+    <!-- Mortgage Calculator -->
+    <div class="aqua-background fluid-container">
+        <h1> Mortgage Calculator </h1>
+
+        <div class="row">
+            <!-- Margin -->
+            <div class="col-md-1"></div>
+
+            <!-- Fixed Costs -->
+            <div class="pink-box col-md-5">
+                <h3>Fixed Costs</h3>
+                <h4 class="text-margin"> Home Price </h4>
+                <input id="homePrice1" type="text" placeholder="$250,000"></br>
+                <h4 class="text-margin"> Interest Rate </h4>
+                <input id="interestRate1" type="text" placeholder="3.5%"></br>
+                <h4 class="text-margin"> Down Payment </h4>
+                <input id="downPayment1" type="text" placeholder="$50,000"></br>
+                <h4 class="text-margin"> Loan Term (in years)</h4>
+                <input id="loanTerm1" type="text" placeholder="30 years"></br>
+                <!-- Max this out at thirty years-->
+
+            </div>
+            <!-- END fixed costs-->
+
+
+            <!-- Variable Costs -->
+            <div class="pink-box col-md-5">
+                <h3>Variable Costs</h3>
+
+                <h4 class="text-margin">Property Taxes (yearly %)</h4>
+                <!-- <input class="round-border" type="checkbox" id="propertyTaxesCheck"> -->
+                <input id="propertyTax1" type="text" placeholder="2.5%"></br>
+
+                <h4 class="text-margin">Homeowners Insurance (monthly cost) </h4>
+                <!--<input class="round-border" id="homeownersInsuranceCheck" type="checkbox">-->
+                <input id="HOI1" type="text" placeholder="$50"></br>
+
+                <h4 class="text-margin">HOA (monthly cost)</h4>
+                <!-- <input class="round-border" id="hoaCheck" type="checkbox">-->
+                <input id="HOA1" type="text" placeholder="$45"></br>
+
+                <h4 class="text-margin">Private Mortgage Insurance (yearly %)</h4>
+                <!--<input class="round-border" id="pmiCheck" type="checkbox">-->
+                <input id="PMI1" type="text" placeholder="1%"></br>
+
+            </div>
+            <!-- END variable costs-->
+
+        </div>
+        <!-- END row -->
+        <button id="calculate" type="button" class="btn btn-lg"> Calculate! </button>
+    </div>
+    <!-- END Inputs -->
+
+
+
+
+
+    <!-- Outputs -->
+    <div class=" dusty-rose-background fluid-container ">
+
+
+
+        <div class="row">
+            <div class="col-md-2">
+                <h2 class="wash">Blah</h2>
+                <h3 class="wash">Blah</h3>
+                <div class="box">
+                    <h4>Principal:</h4>
+                    <h4 class="line">Interest:</h4>
+                    <h4>Property Tax:</h4>
+                    <h4 class="line">HOI:</h4>
+                    <h4>HOA:</h4>
+                    <h4>PMI:</h4>
+                </div>
+            </div>
+            <!-- Margin -->
+            <div class="col-md-3">
+                <h2> Monthly Cost</h2>
+                <h3 id="monthlyCost1">$0 </h3>
+
+                <div class="cost-box">
+
+                    <!-- LEFT SIDE -->
+                    <h4 id="monthlyPrincipal1">$0</h4>
+                    <h4 class="line" id="monthlyInterest1">$0</h4>
+
+                    <!-- RIGHT SIDE -->
+                    <h4 id="monthlyPropertyTax1">$0</h4>
+                    <h4 class="line" id="monthlyHOI1">$0</h4>
+                    <h4 id="monthlyHOA1">$0</h4>
+                    <h4 id="monthlyPMI1">$0</h4>
+
+                </div>
+                <!-- END border -->
+
+            </div>
+            <!-- END monthly payment -->
+
+            <div class="col-md-3">
+                <h2> Yearly Payment </h2>
+                <h3 id="yearlyCost1">$0</h3>
+                <div class="cost-box">
+                    <h4 id="yearlyPrincipal1">$0</h4>
+                    <h4 class="line" id="yearlyInterest1">$0</h4>
+
+                    <h4 id="yearlyPropertyTax1">$0</h4>
+                    <h4 class="line" id="yearlyHOI1">$0</h4>
+                    <h4 id="yearlyHOA1">$0</h4>
+                    <h4 id="yearlyPMI1">$0</h4>
+                </div>
+                <!--END gold box -->
+            </div>
+            <!--END yearly Payment -->
+
+            <div class="col-md-3">
+                <h2>Total Payment</h2>
+
+                <h3 id="overallCost1">$0</h3>
+                <div class="cost-box">
+                    <h4 id="overallPrincipal1">$0</h4>
+                    <h4 class="line" id="overallInterest1">$0</h4>
+
+                    <h4 id="overallPropertyTax1">$0</h4>
+                    <h4 class="line" id="overallHOI1">$0</h4>
+                    <h4 id="overallHOA1">$0</h4>
+                    <h4 id="overallPMI1">$0</h4>
+                </div>
+                <!--END gold box -->
+            </div>
+            <!--END total payment -->
+        </div>
+        <!-- END main row -->
+
+
+
+    </div>
+    <!-- END dust rose background/Monthly cost -->
+</div>
+<!-- END lavender background/ LAST LINE -->
+
+</html>
+
+<style>
+    .lavender-background {
+        background-color: #6c648b;
+        padding: 0.5% 10% 2%
+    }
+    /*overall page  background */
+    
+    .header {
+        background-color: #fba100;
+        padding: 1%;
+        margin: 0% 10% 0%;
+        border: 2px solid #fba100;
+        border-radius: 10px;
+    }
+    
+    .dusty-rose-background {
+        background-color: #d6c0bd;
+        border-radius: 15px;
+        border: 2px solid #fba100;
+        border-radius: 8px;
+    }
+    /*differentiates sections; use aqua & sunshine for accents */
+    
+    .aqua-background {
+        background-color: #6bbaa7;
+        border: 5px solid #d6c0bd;
+        border-radius: 8px;
+        margin: 2% 4%;
+        padding: 2%;
+    }
+    
+    .pink-box {
+        border: 5px solid #d6c0bd;
+        border-radius: 8px;
+        margin: 1% 1% 2.5%;
+        padding: 3%;
+    }
+    
+    .cost-box {
+        margin: 1% 15% 10%;
+        border: 2px solid #fba100;
+        border-radius: 8px;
+        padding: 1% 11%;
+    }
+    
+    .line {
+        border-bottom-color: #9b9494;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        padding: 6% 0%;
+    }
+    
+    .wash {
+        color: #d6c0bd;
+    }
+    
+    .box {
+        margin: 1% 2% 10%;
+        /*border: 2px solid #fba100;*/
+        border-radius: 8px;
+        padding: 1% 0% 1% 35%;
+    }
+    
+    input {
+        text-align: center;
+        border: solid 2px #9b9494;
+        border-radius: 15px;
+        width: 45%;
+        margin: 1% 25%;
+        padding: 1.5%;
+        font-size: 18px;
+        font-family: Raleway;
+    }
+    
+    .text-margin {
+        margin: 1% 12%;
+    }
+    
+    #calculate {
+        border: 3px solid #6bbaa7;
+        border-radius: 10px;
+        font-size: 1.25vw;
+        font-family: Raleway;
+        padding: 1.25%;
+        margin: 0% 47% 0%;
+    }
+    
+    #calculate:hover,
+    #portfolio:hover {
+        color: white;
+        background-color: #6c648b;
+    }
+    
+    #portfolio {
+        border: 3px solid #fba100;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: Alegreya;
+        padding: 7% 15%;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        font-family: Alegreya;
+        margin: 15px 25px;
+        text-align: center;
+    }
+    /* major headings */
+    
+    h4,
+    h5,
+    h6 {
+        font-family: Raleway;
+        text-align: left;
+        margin: 10px 10px;
+    }
+    
+    h4 {
+        font-size: 1.025vw;
+    }
+    /* minor headings */
+    
+    p {
+        font-family: Raleway;
+        margin: 10px;
+    }
+    /* regular ol' text*/
+</style>
+
+<script>
+    $(document).ready(function() {
+
+
+
+        $("#calculate ").click(function calculator() {
+
+
+
+            //Home1 Inputs
+            var inputs1 = {
+                homePrice: $("#homePrice1 ").val(),
+                interestRate: $("#interestRate1 ").val(),
+                downPayment: $("#downPayment1 ").val(),
+                loanTerm: $("#loanTerm1 ").val(),
+
+                pmi: $("#PMI1 ").val() / 100,
+                propertyTax: $("#propertyTax1 ").val() / 100,
+                hoi: $("#HOI1 ").val(),
+                hoa: $("#HOA1 ").val()
+            };
+
+
+            if ((inputs1.loanTerm == false) || (inputs1.homePrice == false) || (inputs1.interestRate == false) || (inputs1.downPayment == false)) {
+                swal("Warning", "Please input all Fixed Costs", "warning");
+            } else {
+
+
+                inputs1;
+
+                function comma(zed) {
+
+                    if (zed.length == 7) {
+                        var first = zed.slice(0, 1);
+                        var second = zed.slice(1, 7);
+                        var com = ",";
+                        return zed = first.concat(com, second);
+                    } /*4,000.00*/
+                    else if (zed.length == 8) {
+                        var first = zed.slice(0, 2);
+                        var second = zed.slice(2, 8);
+                        var com = ",";
+                        return zed = first.concat(com, second);
+                    } /*40,000.00*/
+                    else if (zed.length == 9) {
+                        var first = zed.slice(0, 3);
+                        var second = zed.slice(3, 9);
+                        var com = ",";
+                        return zed = first.concat(com, second);
+                    } /*400,000.00*/
+                    else if (zed.length == 10) {
+                        var first = zed.slice(0, 1);
+                        var second = zed.slice(1, 4);
+                        var third = zed.slice(4, 10);
+                        var com = ",";
+                        return zed = first.concat(com, second, com, third);
+                    } /*4,000,000.00*/
+                    else if (zed.length == 11) {
+                        var first = zed.slice(0, 2);
+                        var second = zed.slice(2, 5);
+                        var third = zed.slice(5, 11);
+                        var com = ",";
+                        return zed = first.concat(com, second, com, third);
+                    } /*40,000,000.00*/
+                    else if (zed.length == 12) {
+                        var first = zed.slice(0, 3);
+                        var second = zed.slice(3, 6);
+                        var third = zed.slice(6, 12);
+                        var com = ",";
+                        return zed = first.concat(com, second, com, third);
+                    } /*400,000,000.00*/
+                    else {
+                        return zed;
+                    }
+
+                } //END function comma
+
+
+                //Conversion Elements
+                var principal1 = inputs1.homePrice - inputs1.downPayment;
+                var loanTermMonths1 = inputs1.loanTerm * 12;
+                var interestRateMonths1 = inputs1.interestRate / 12;
+                var powerEquation1 = Math.pow(1 + (interestRateMonths1), (loanTermMonths1));
+                var totalInterest1 = (principal1 * (interestRateMonths1 * powerEquation1)) / (powerEquation1 - 1);
+
+                console.log(principal1, loanTermMonths1, interestRateMonths1, powerEquation1, totalInterest1);
+
+
+                //Home1 - Monthly Outputs   
+                var monthlyOutputs1 = {
+
+                    principal: principal1 / loanTermMonths1,
+                    interest: totalInterest1 / loanTermMonths1,
+
+                    HOI: Number(inputs1.hoi),
+                    HOA: Number(inputs1.hoa),
+                    PMI: principal1 * inputs1.pmi / 12,
+                    propertyTax: inputs1.homePrice * inputs1.propertyTax / 12
+                };
+
+                //var monthlyCost1 = 0;
+                var monthlyCost1 = monthlyOutputs1.principal + monthlyOutputs1.interest + monthlyOutputs1.HOI + monthlyOutputs1.HOA + monthlyOutputs1.PMI + monthlyOutputs1.propertyTax;
+
+                console.log(typeof monthlyOutputs1.HOI, typeof monthlyOutputs1.HOA, typeof monthlyOutputs1.principal, typeof monthlyOutputs1.interest, typeof monthlyOutputs1.PMI, typeof monthlyOutputs1.propertyTax, typeof monthlyCost1);
+
+                monthlyOutputs1.principal = monthlyOutputs1.principal.toFixed(2);
+                monthlyOutputs1.interest = monthlyOutputs1.interest.toFixed(2);
+
+                monthlyOutputs1.HOI = monthlyOutputs1.HOI.toFixed(2);
+                monthlyOutputs1.HOA = monthlyOutputs1.HOA.toFixed(2);
+                monthlyOutputs1.PMI = monthlyOutputs1.PMI.toFixed(2);
+                monthlyOutputs1.propertyTax = monthlyOutputs1.propertyTax.toFixed(2);
+
+                monthlyCost1 = monthlyCost1.toFixed(2);
+
+
+
+                $('#monthlyPrincipal1').text("$ " + comma(monthlyOutputs1.principal));
+                $('#monthlyInterest1').text("$ " + comma(monthlyOutputs1.interest));
+
+                $('#monthlyPropertyTax1').text("$ " + comma(monthlyOutputs1.propertyTax));
+                $('#monthlyHOI1').text("$ " + comma(monthlyOutputs1.HOI));
+                $('#monthlyHOA1').text("$ " + comma(monthlyOutputs1.HOA));
+                $('#monthlyPMI1').text("$ " + comma(monthlyOutputs1.PMI));
+
+                $('#monthlyCost1').text("$ " + comma(monthlyCost1));
+
+
+                //Home 1 - Yearly Outupts 
+                var yearlyOutputs1 = {
+
+                    principal: principal1 / inputs1.loanTerm,
+                    interest: totalInterest1 / inputs1.loanTerm,
+
+                    HOI: Number(inputs1.hoi) * 12,
+                    HOA: Number(inputs1.hoa) * 12,
+                    PMI: principal1 * inputs1.pmi,
+                    propertyTax: inputs1.homePrice * inputs1.propertyTax
+                };
+
+                var yearlyCost1 = yearlyOutputs1.principal + yearlyOutputs1.interest + yearlyOutputs1.HOI + yearlyOutputs1.HOA + yearlyOutputs1.PMI + yearlyOutputs1.propertyTax;
+
+                yearlyOutputs1.principal = yearlyOutputs1.principal.toFixed(2);
+                yearlyOutputs1.interest = yearlyOutputs1.interest.toFixed(2);
+
+                yearlyOutputs1.HOI = yearlyOutputs1.HOI.toFixed(2);
+                yearlyOutputs1.HOA = yearlyOutputs1.HOA.toFixed(2);
+                yearlyOutputs1.PMI = yearlyOutputs1.PMI.toFixed(2);
+                yearlyOutputs1.propertyTax = yearlyOutputs1.propertyTax.toFixed(2);
+
+                yearlyCost1 = yearlyCost1.toFixed(2);
+
+                console.log(yearlyOutputs1, yearlyCost1);
+
+                $('#yearlyPrincipal1').text("$ " + comma(yearlyOutputs1.principal));
+                $('#yearlyInterest1').text("$ " + comma(yearlyOutputs1.interest));
+
+                $('#yearlyPropertyTax1').text("$ " + comma(yearlyOutputs1.propertyTax));
+                $('#yearlyHOI1').text("$ " + comma(yearlyOutputs1.HOI));
+                $('#yearlyHOA1').text("$ " + comma(yearlyOutputs1.HOA));
+                $('#yearlyPMI1').text("$ " + comma(yearlyOutputs1.PMI));
+
+                $('#yearlyCost1').text("$ " + comma(yearlyCost1));
+
+
+                //Home 1 - Overall Outupts 
+                var overallOutputs1 = {
+
+                    principal: principal1,
+                    interest: totalInterest1,
+
+                    HOI: Number(inputs1.hoi) * loanTermMonths1,
+                    HOA: Number(inputs1.hoa) * loanTermMonths1,
+                    PMI: principal1 * inputs1.pmi * inputs1.loanTerm,
+                    propertyTax: inputs1.homePrice * inputs1.propertyTax * inputs1.loanTerm
+                };
+
+                var overallCost1 = overallOutputs1.principal + overallOutputs1.interest + overallOutputs1.HOI + overallOutputs1.HOA + overallOutputs1.PMI + overallOutputs1.propertyTax;
+
+                overallOutputs1.principal = overallOutputs1.principal.toFixed(2);
+                overallOutputs1.interest = overallOutputs1.interest.toFixed(2);
+
+                overallOutputs1.HOI = overallOutputs1.HOI.toFixed(2);
+                overallOutputs1.HOA = overallOutputs1.HOA.toFixed(2);
+                overallOutputs1.PMI = overallOutputs1.PMI.toFixed(2);
+                overallOutputs1.propertyTax = overallOutputs1.propertyTax.toFixed(2);
+
+                overallCost1 = overallCost1.toFixed(2);
+
+
+                $('#overallPrincipal1').text("$ " + comma(overallOutputs1.principal));
+                $('#overallInterest1').text("$ " + comma(overallOutputs1.interest));
+
+                $('#overallPropertyTax1').text("$ " + comma(overallOutputs1.propertyTax));
+                $('#overallHOI1').text("$ " + comma(overallOutputs1.HOI));
+                $('#overallHOA1').text("$ " + comma(overallOutputs1.HOA));
+                $('#overallPMI1').text("$ " + comma(overallOutputs1.PMI));
+
+                $('#overallCost1').text("$ " + comma(overallCost1));
+
+            }; //END else
+
+        }); // END calculator function
+
+    }); // END document.ready function
+</script>
