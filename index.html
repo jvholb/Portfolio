@@ -1,0 +1,245 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- jquery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- bootstrap -->
+    <meta charset="UTF-8">
+    <!-- unicode -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- viewport -->
+    <script src="https://use.fontawesome.com/509a648fe1.js"></script>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans">
+    <!-- Google font -->
+</head>
+
+<div class="background fluid-container">
+    <!-- Header -->
+    <div class="header fluid-container sticky-top">
+        <div class="btn-group" role="group">
+            <a href="#about">
+                <button type="button" class="btn btn-secondary"> About </button>
+            </a>
+            <a href="#portfolio">
+                <button type="button" class="btn btn-secondary"> Portfolio </button>
+            </a>
+            <a href="#contact">
+                <button type="button" class="btn btn-secondary"> Contact </button>
+            </a>
+        </div>
+    </div>
+    <!-- END header -->
+
+
+    <!-- About -->
+    <div class="silver-box fluid-container row">
+
+        <div class="green-box col-md-6">
+            <h1 id="about"> About</h1>
+            <p> Jillian is currently studying PCB Design and IC Layout & Design and earned an AAS in Electronics from Austin Community College in 2017. She is a resourceful creative who considers the day wasted if nothing was learned, solved, accomplished
+                or enjoyed. Her programming tool box includes HTML, CSS, Javascript, jQuery and Bootstrap.</p>
+        </div>
+        <!--END paragraph/green box -->
+
+        <div>
+            <img class="pic col-md-6" src="images/profilepic.png" alt="profile-pic">
+        </div>
+        <!--END pic -->
+    </div>
+    <!-- END about -->
+
+
+
+    <!-- Portfolio -- 3 projects per line -->
+    <div class="purple-box fluid-container">
+        <h1 id="portfolio"> Portfolio </h1>
+
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="col-md-5 col-lg-5 picture-box">
+                <a href="mortgageCalc.html"><img class="img" src="images/mortgageCalc.JPG" alt="Mortgage Calculator"></a>
+                <h3>Mortgage Calculator</h3>
+            </div>
+            <!-- END Mortgage Calculator -->
+            <div class="col-md-2 col-lg-2"></div>
+            <!--Padding-->
+            <div class="col-md-5 col-lg-5 picture-box">
+                <a href="tributePage_miyazaki.html"><img class="img" src="images/miyazaki.JPG" alt="Miyazaki Remakes Himself"></a>
+                <h3>Miyazaki Remakes Himself</h3>
+
+            </div>
+            <!-- END Diagnostic Tool -->
+        </div>
+        <!-- END Row 1 -->
+
+        <!-- Row 2 -->
+        <div class="row">
+            <div class="col-md-5 col-lg-5 picture-box">
+                <a href="hangman.html"><img class="img" src="images/hangman.JPG" alt="Hangman"></a>
+                <h3>Hangman</h3>
+            </div>
+            <!-- END Tribute Page -->
+            <div class="col-md-2 col-lg-2"></div>
+            <!--Padding-->
+            <div class="col-md-5 col-lg-5 picture-box">
+
+
+                <a href="diagnosticTool.html"><img class="img" src="images/diagnosticTool.JPG" alt="Diagnostic Tool"></a>
+                <h3>Diagnostic Tool</h3>
+
+            </div>
+            <!-- END hangman -->
+        </div>
+        <!-- END row 2 -->
+
+
+    </div>
+    <!-- END portfoloio -->
+
+    <!--Footer/Contact (yellow/gold)-->
+    <div class="fluid-container footer">
+        <h3 id="contact">Contact</h3>
+        <div class="row"><i class="fa fa-envelope" aria-hidden="true"> jvholb@gmail.com</i></div>
+        <div class="row">
+            <a href="https://www.linkedin.com/in/jvholb/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/jvholb/Portfolio"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        </div>
+
+
+    </div>
+    <!-- END footer -->
+
+
+</div>
+<!-- END background, LAST LINE -->
+
+
+</html>
+
+<style>
+    /*.light-green  #E3F6D5;}
+        .dark-green  #699D43;}
+        .purple  #691084;}
+        .gold-background  #A97628;}
+        .dark purple-background  #2A1730;}
+        .silver-background: #D9D9d9 */
+    
+    .header {
+        background-color: #A97628;
+        color: #2A1730;
+        margin: 0% 20% 2%;
+        padding: 2% 2%;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 1.8;
+    }
+    
+    .footer {
+        background-color: #A97628;
+        color: #2A1730;
+        margin: 0% 20%;
+        padding: 1% 1%;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 1.8;
+    }
+    
+    .fa {
+        color: #2A1730;
+    }
+    
+    .fa-linkedin:hover,
+    .fa-github:hover {
+        color: white;
+    }
+    
+    a:hover {
+        opacity: 0.7;
+    }
+    
+    .background {
+        background-color: #699D43;
+        padding: 0.5% 10% 0.5%;
+    }
+    
+    .silver-box {
+        background-color: #D9D9d9;
+        color: #691084;
+        margin: 0% 3% 3%;
+        padding: 3.5%;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 2;
+    }
+    
+    .purple-box {
+        background-color: #691084;
+        color: #D9D9D9;
+        margin: 0% 3% 2%;
+        padding: 1.5% 3% 3%;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 2;
+    }
+    
+    .btn {
+        color: #691084;
+        background-color: white;
+    }
+    
+    .btn:hover {
+        color: white;
+        background-color: #691084;
+    }
+    
+    .picture-box {
+        background-color: rgb(201, 135, 223);
+        margin: 1.5% 4% 2%;
+        padding: 3.75% 0.1% 2%;
+        border-radius: 7px;
+    }
+    
+    .green-box {
+        background-color: #E3F6D5;
+        margin: 2% 5%;
+        padding: 0.5% 5% 2%;
+        border-radius: 10px;
+        font-size: 1.10vw;
+    }
+    
+    .pic {
+        width: 28%;
+        border-radius: 10px;
+        margin: 2% 0% 2% 5%;
+        box-sizing: border-box;
+    }
+    
+    .img {
+        width: 75%;
+        border-radius: 5px;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        font-family: Inconsolata;
+        text-align: center;
+    }
+    /* major headings */
+    
+    h4,
+    h5,
+    h6 {
+        font-family: Open Sans;
+        text-align: left;
+    }
+    /* minor headings */
+    
+    p {
+        font-family: Open Sans;
+        text-align: left;
+    }
+    /* regular ol' text*/
+</style>
